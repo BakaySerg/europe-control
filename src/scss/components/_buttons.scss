@@ -1,0 +1,43 @@
+.btn {
+	display: inline-block;
+	color: currentColor;
+	border: none;
+	font-size: 1em;
+	text-align: center;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	outline-color: transparent;
+	background-color: transparent;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	transition: background-color .3s, color .3s, border-color .3s, opacity .3s, box-shadow .3s;
+	cursor: pointer;
+	user-select: none;
+	font-family: inherit;
+	flex-shrink: 0;
+	&>* {
+		pointer-events: none;
+	}
+	&--lg {
+		min-width: 230px;
+		padding: .88em;
+	}
+	&--icon {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		gap: 1.4em;
+		& > .icon {
+			width: 10px;
+			height: 10px;
+			margin-right: -8px;
+			position: relative;
+			transition: transform .3s;
+		}
+		&:hover {
+			.icon {
+				transform: translateX(3px);
+			}
+		}
+	}
+}

@@ -1,0 +1,39 @@
+//fonts
+$default-font: 'MyriadPro',arial, sans-serif;
+
+//text
+$text:#193F3F;
+// $base-text: rgba(#2C374D,0.7);
+$muted-text: #6B7382;
+
+// bg
+$white: #fff;
+$bg: #F5F6FA;
+$bg-dark: #688595;
+// $border: #f5f5fb;
+
+//accents
+$accent: #70C1A0;
+
+//px -> em
+@use "sass:math";
+$browser-context: 18;
+
+@function em($pixels, $context: $browser-context) {
+	@return math.div($pixels,$context) * 1em;
+}
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

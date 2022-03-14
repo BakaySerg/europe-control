@@ -1,0 +1,51 @@
+@import "abstracts/vars";
+@import "base/reset";
+@import "base/fonts";
+@import "base/helpers";
+
+body {
+	position: relative;
+	color: $text;
+	font-family: $default-font;
+	font-size: 16px;
+	line-height: 1.5;
+	background: transparent;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	min-height: 100vh;
+	@media (max-width: 767px) {
+		font-size: 15px;
+	}
+}
+.wrapper {
+	position: relative;
+	width: 100%;
+	min-height: 50vh;
+}
+.container {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	width: 100%;
+	max-width: 1282px;
+	&--lg {
+		max-width: 1400px;
+	}
+	@media (max-width: 359px) {
+		padding-left: 14px;
+		padding-right: 14px;
+	}
+}
+
+
+//components
+// @import "components/buttons";
+// layout
+@import "layout/header";
+@import "layout/footer";
+
+//modules
+// @import "modules/intro";
+
