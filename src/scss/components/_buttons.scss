@@ -40,4 +40,50 @@
 			}
 		}
 	}
+	&--circle {
+		width: 9em;
+		height: 9em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		align-content: center;
+		font-size: em(16);
+		font-weight: 800;
+		flex-wrap: wrap;
+		border-radius: 8em;
+		color: $blue;
+		background-color: $yellow;
+		padding: 1em .2em .2em;
+		position: relative;
+		overflow: visible;
+		transition: .3s;
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 112%;
+			height: 112%;
+			top: -6%;
+			left: -6%;
+			border: 2px solid;
+			border-color: transparent $yellow $yellow transparent;
+			border-radius: 30em;
+			transform: rotate(-23deg);
+			clip-path: polygon(100% 0, 42% 100%, 100% 100%);
+			transition: $transition;
+		}
+		&:hover {
+			background-color: $yellow-hover;
+			&:after {
+				transform: rotate(-118deg);
+			}
+		}
+		span {
+			width: 100%;
+			text-transform: uppercase;
+		}
+		.arrow {
+			transform: rotate(90deg);
+		}
+	}
 }

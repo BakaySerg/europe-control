@@ -1,0 +1,39 @@
+.overtitle {
+	font-size: em(14);
+	font-family: $add-font;
+	font-weight: 400;
+	opacity: .52;
+	padding-bottom: .6em;
+}
+.subtitle {
+	font-weight: 600;
+	font-size: em(22);
+	line-height: 1.63;
+}
+.strong {
+	font-family: $add-font;
+	font-weight: 900;
+	font-size: em(26);
+}
+.h1 {
+	font-family: $add-font;
+	font-weight: 900;
+	font-size: em(60);
+}
+.h2 {
+	font-family: $add-font;
+	font-weight: 900;
+	font-size: em(45);
+}
+.h3 {
+	font-weight: 800;
+	font-size: em(28);
+}
+.accent {
+	color: $yellow;
+}
+.icon-text {
+	display: flex;
+	align-items: center;
+	gap: 0.6em;
+}

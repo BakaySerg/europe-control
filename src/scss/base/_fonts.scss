@@ -1,24 +1,40 @@
 @font-face {
-	font-family: 'LexendDeca';
-	src: local('Lexend Deca bold'),
-	local('lexenddeca-bold-bold'),
-	url('../fonts/lexenddeca-bold.woff2') format('woff2'),
-	url('../fonts/lexenddeca-bold.woff') format('woff');
-	font-weight: 700;
-}
-@font-face {
-	font-family: 'MyriadPro';
-	src: local('MyriadPro regular'),
-	local('myriadpro-regular'),
-	url('../fonts/myriadpro-regular.woff2') format('woff2'),
-	url('../fonts/myriadpro-regular.woff') format('woff');
+	font-family: 'Manrope';
+	src: local('Manrope regular'),
+	local('manrope-regular'),
+	url('../fonts/manrope-regular.woff2') format('woff2'),
+	url('../fonts/manrope-regular.woff') format('woff');
 	font-weight: 400;
 }
 @font-face {
-	font-family: 'MyriadPro';
-	src: local('MyriadPro bold'),
-	local('myriadpro-bold'),
-	url('../fonts/myriadpro-bold.woff') format('woff2'),
-	url('../fonts/myriadpro-bold.woff') format('woff');
-	font-weight: 700;
+	font-family: 'Manrope';
+	src: local('Manrope semibold'),
+	local('manrope-semibold'),
+	url('../fonts/manrope-semibold.woff') format('woff2'),
+	url('../fonts/manrope-semibold.woff') format('woff');
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'Manrope';
+	src: local('Manrope extrabold'),
+	local('manrope-extrabold'),
+	url('../fonts/manrope-extrabold.woff') format('woff2'),
+	url('../fonts/manrope-extrabold.woff') format('woff');
+	font-weight: 800;
+}
+@font-face {
+	font-family: 'LexendDeca';
+	src: local('Lexend Deca regular'),
+	local('lexenddeca-regular'),
+	url('../fonts/lexenddeca-regular.woff2') format('woff2'),
+	url('../fonts/lexenddeca-regular.woff') format('woff');
+	font-weight: 400;
+}
+@font-face {
+	font-family: 'LexendDeca';
+	src: local('Lexend Deca black'),
+	local('lexenddeca-black'),
+	url('../fonts/lexenddeca-black.woff2') format('woff2'),
+	url('../fonts/lexenddeca-black.woff') format('woff');
+	font-weight: 900;
 }
