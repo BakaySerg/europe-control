@@ -4,6 +4,9 @@
 	font-weight: 400;
 	opacity: .52;
 	padding-bottom: .6em;
+	@media (max-width: 991px){
+		font-size: em(15);
+	}
 }
 .subtitle {
 	font-weight: 600;
@@ -14,6 +17,9 @@
 	font-family: $add-font;
 	font-weight: 900;
 	font-size: em(26);
+	@media (max-width: 600px){
+		font-size: 1.2em;
+	}
 }
 .h1 {
 	font-family: $add-font;
