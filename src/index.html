@@ -7,9 +7,31 @@
 </head>
 
 <body>
-	@@include('./include/header.html')
 	<div class="wrapper">
 		@@include('./include/icon-sprite.html')
+		<div class="intro intro--lg" style="--bg1x: url(../img/home/intro.jpg); --bg2x:url(../img/home/intro-2x.jpg);">
+			@@include('./include/header.html')
+			<!-- s-intro -->
+			<section class="s-intro">
+				<div class="container intro__row">
+					<div class="intro__text">
+						<h1 class="h1"><span class="accent">Best</span> Business Managerial Support Services Provider</h1>
+						<p class="subtitle">Meet Business Goals and Objectives Faster with <br>Our&nbsp;Trustee Consultant Business Solutions</p>
+					</div>
+				</div>
+				<div class="intro__cta text-center container">
+					<a href="#" class="btn btn--circle">
+						<span>LEARN MORE</span>
+						<svg class="arrow arrow--down" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg>
+					</a>
+				</div>
+			</section>
+		</div>
+
+		<!-- s-simply -->
+		<section class="s--simply">
+			<div class="container"></div>
+		</section>
 
 
 	</div><!-- /wrapper -->

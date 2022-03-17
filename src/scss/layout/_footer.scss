@@ -2,6 +2,9 @@
 	background-color: $blue;
 	color: #fff;
 	overflow: hidden;
+	max-width: 2200px;
+	margin-left: auto;
+	margin-right: auto;
 	&__top {
 		padding-top: 4.4em;
 		padding-bottom: 5.4em;

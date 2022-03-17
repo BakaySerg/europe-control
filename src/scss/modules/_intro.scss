@@ -1,0 +1,74 @@
+.intro {
+	position: relative;
+	&--lg {
+		@media (min-width: 1024px){
+			min-height: 85vh;
+		}
+		max-height: 830px;
+		background-image: var(--bg1x);
+		background-position: center;
+		background-size: cover;
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi),(min-width: 2000px) {
+			background-image: var(--bg2x);
+		}
+		@media (min-width: 2000px){
+			min-height: 850px;
+		}
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background: linear-gradient(180deg, #001F37 0%, rgba(2,5,17,.3) 100%);
+		opacity: .45;
+	}
+	&__row {
+		position: relative;
+		&:before,&:after {
+			content: '';
+			position: absolute;
+			width: 7em;
+			height: 7em;
+			background-size: contain !important;
+		}
+		&:before {
+			background: url(../img/general/dots-light-1.svg) top no-repeat;
+			top: -3em;
+			left: -2.6em;
+			@media (max-width: 1100px){
+				left: 20px;
+				width: 5em;
+				height: 5em;
+			}
+		}
+		&:after {
+			background: url(../img/general/dots-light-3.svg) top no-repeat;
+			right: 0;
+			bottom: 0;
+			@media (max-width: 1100px){
+				right: 20px;
+				width: 5em;
+				height: 5em;
+			}
+		}
+	}
+	&__text {
+		max-width: 750px;
+		margin-top: 5em;
+		margin-bottom: 3em;
+		@media (max-width: 1100px){
+			padding-top: 3em;
+		}
+	}
+	&__cta {
+		padding-top: 1em;
+	}
+}
+.s-intro {
+	background-position: center;
+	color: $white;
+	padding-bottom: 3em;
+}
