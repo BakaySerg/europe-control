@@ -18,18 +18,30 @@
 	&>* {
 		pointer-events: none;
 	}
-	&--lg {
-		min-width: 230px;
-		padding: .88em;
+	&--rounded {
+		border-radius: 4em;
+		padding: .74em .6em;
+		font-size: em(16);
+		font-weight: 600;
+		@media (min-width: 1024px){
+			min-width: 220px;
+		}
+	}
+	&--white {
+		color: $white;
+		border: 1px solid;
+		&:hover {
+			background-color: $white;
+			border-color: $white;
+			color: $text;
+		}
 	}
 	&--icon {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		gap: 1.4em;
+		gap: 1em;
 		& > .icon {
-			width: 10px;
-			height: 10px;
 			margin-right: -8px;
 			position: relative;
 			transition: transform .3s;
