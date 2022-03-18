@@ -2,6 +2,9 @@
 	position: relative;
 	z-index: 11;
 	transition: .3s;
+	@media (min-width: 1024px){
+		border-bottom: 1px solid $border-light;
+	}
 	@media (max-width: 991px){
 		margin-bottom: -10px;
 	}
@@ -21,66 +24,9 @@
 			max-width: 110px;
 		}
 	}
-	.lang {
-		position: relative;
-		z-index: 3;
-		padding-left: 1em;
-		font-size: 17px;
-		@media (min-width: 1024px){
-			&:before {
-				content: '|';
-				position: absolute;
-				left: 0;
-			}
-		}
-		@media (max-width: 1023px){
-			z-index: 99;
-		}
-		@media (max-width: 600px){
-			top: 2px;
-		}
-		& > span {
-			user-select: none;
-			position: relative;
-			z-index: 1;
-		}
-		&__list {
-			position: absolute;
-			border: 1px solid transparent;
-			transition: .3s;
-			top: -.4em;
-			left: -1em;
-			padding: 2.4em 1em .2em 1em;
-			width: 5em;
-			opacity: 0;
-			visibility: hidden;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			border-radius: 2px;
-			a {
-				display: block;
-				text-shadow: 0 0;
-				padding: 0.1em;
-				width: 100%;
-				text-align: center;
-				color: $yellow;
-			}
-		}
-		&:hover {
-			.lang__list {
-				background-color: $white;
-				opacity: 1;
-				visibility: visible;
-			}
-		}
-		@media (max-width: 1023px){
-			margin-left: auto;
-		}
-	}
 	&>.container {
-		padding-top: 1.9em;
-		padding-bottom: 1.9em;
+		padding-top: .9em;
+		padding-bottom: .9em;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -111,6 +57,11 @@
 			color: $white;
 			@media (max-width: 1023px){
 				gap: 0.6em;
+			}
+		}
+		&--hovered {
+			ul {
+				color: $text;
 			}
 		}
 		&__link {
@@ -222,6 +173,7 @@
 	@media (min-width: 1024px){
 		.sub-menu-dialog {
 			background-color: #fff;
+			color: $text;
 			position: absolute;
 			left: 0;
 			right: 0;
