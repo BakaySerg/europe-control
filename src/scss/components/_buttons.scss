@@ -23,8 +23,13 @@
 		padding: .74em .6em;
 		font-size: em(16);
 		font-weight: 600;
-		@media (min-width: 1024px){
+		min-width: 180px;
+		@media (min-width: 1100px){
 			min-width: 220px;
+		}
+		@media (max-width: 500px){
+			min-width: 110px;
+			font-size: em(14);
 		}
 	}
 	&--white {

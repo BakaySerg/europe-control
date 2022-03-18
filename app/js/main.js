@@ -75,10 +75,10 @@
 
 	document.querySelectorAll('.sub-menu').forEach(item => {
 		item.addEventListener('mouseenter', event => {
-			item.closest(".menu").classList.add('menu--hovered');
+			item.closest(".header").classList.add('header--hovered');
 		});
 		item.addEventListener('mouseleave', event => {
-			item.closest(".menu").classList.remove('menu--hovered');
+			item.closest(".header").classList.remove('header--hovered');
 		});
 	})
 
