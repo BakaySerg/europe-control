@@ -26,6 +26,9 @@
 		font-size: 1.2em;
 	}
 }
+p {
+	padding-bottom: 1.2em;
+}
 .h1 {
 	font-family: $add-font;
 	font-weight: 900;
@@ -47,6 +50,13 @@
 	font-family: $add-font;
 	font-weight: 900;
 	font-size: em(45);
+	line-height: 1.16;
+	@media (max-width: 991px){
+		font-size: em(40);
+	}
+	@media (max-width: 767px){
+		font-size: em(34);
+	}
 }
 .h3 {
 	font-weight: 800;
@@ -64,4 +74,25 @@
 .unim {
 	font-size: em(15);
 	opacity: 0.7;
+}
+.title {
+	position: relative;
+	padding-bottom: 1.1em;
+	padding-left: 1em;
+	align-self: flex-start;
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: .6em;
+		border-left: 2px solid $yellow;
+		height: 88%;
+	}
+	&--sm {
+		max-width: 230px;
+	}
+	@media (max-width: 767px){
+		margin-bottom: 2em;
+		padding-bottom: 0.5em;
+	}
 }

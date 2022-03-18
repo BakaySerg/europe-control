@@ -67,6 +67,11 @@
 		display: none;
 	}
 }
+.hidden-md {
+	@media (max-width: 1200px){
+		display: none;
+	}
+}
 .text-center {
 	text-align: center;
 	margin: auto;
