@@ -2,7 +2,8 @@
 	font-size: em(14);
 	font-family: $add-font;
 	font-weight: 400;
-	opacity: .52;
+	font-style: normal;
+	opacity: .6;
 	padding-bottom: .6em;
 	@media (max-width: 991px){
 		font-size: em(15);
@@ -87,6 +88,11 @@ p {
 		top: .6em;
 		border-left: 2px solid $yellow;
 		height: 88%;
+	}
+	&--blue {
+		&:before {
+			border-left-color: $blue;
+		}
 	}
 	&--sm {
 		max-width: 230px;

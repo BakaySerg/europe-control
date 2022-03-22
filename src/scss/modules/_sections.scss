@@ -43,3 +43,61 @@
 		}
 	}
 }
+.s--mini {
+	padding-top: 5em;
+	padding-bottom: 5em;
+}
+.s {
+	&--blue {
+		color: $white;
+		background-color: $blue;
+	}
+	&--dark {
+		color: $white;
+		background-color: $dark;
+	}
+	&--yellow {
+		background-color: $yellow;
+	}
+	&--muted-filled {
+		background-color: $white-muted;
+	}
+	&--point-light {
+		background-image: url(../img/general/points-light.png);
+		background-repeat: repeat-y;
+		background-position: 30% 35%;
+	}
+	&--point-dark {
+		background-image: url(../img/general/points-dark.png);
+		background-repeat: repeat-y;
+		background-position: 90% 35%;
+	}
+}
+.mini {
+	&__row {
+		@media (min-width: 720px){
+			display: flex;
+			justify-content: space-between;
+			gap: 2.2em;
+		}
+		@media (min-width: 1100px){
+			gap: 3em;
+		}
+		@media (max-width: 767px){
+			flex-wrap: wrap;
+		}
+		.title {
+			flex-shrink: 0.1;
+		}
+	}
+	&__text {
+		padding-top: 1.9em;
+		@media (min-width: 1100px){
+			max-width: 420px;
+		}
+		p {padding-bottom: 0;}
+	}
+	&__cta {
+		padding-top: 2em;
+	}
+}

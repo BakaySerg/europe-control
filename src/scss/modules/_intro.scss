@@ -62,6 +62,9 @@
 		max-width: 750px;
 		margin-top: 5.3em;
 		margin-bottom: 3em;
+		@media (min-width: 1600px){
+			margin-top: 6.4em;
+		}
 		@media (max-width: 1100px){
 			padding-top: 3em;
 		}

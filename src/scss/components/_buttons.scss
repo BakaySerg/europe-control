@@ -41,6 +41,31 @@
 			color: $text;
 		}
 	}
+	&--blue-empty {
+		color: $blue;
+		border: 1px solid;
+		&:hover {
+			color: $white;
+			background-color: $blue;
+			border-color: $blue;
+		}
+	}
+	&--yellow-empty {
+		color: $yellow;
+		border: 1px solid;
+		&:hover {
+			color: $text;
+			background-color: $yellow;
+		}
+	}
+	&--yellow-filled{
+		color: $text;
+		border: 1px solid $yellow;
+		background-color: $yellow;
+		&:hover {
+			background-color: $yellow-hover;
+		}
+	}
 	&--icon {
 		display: inline-flex;
 		align-items: center;
