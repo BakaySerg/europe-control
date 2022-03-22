@@ -46,6 +46,14 @@
 .s--mini {
 	padding-top: 5em;
 	padding-bottom: 5em;
+	@media (max-width: 991px){
+		padding-top: 4em;
+		padding-bottom: 4em;
+	}
+	@media (max-width: 600px){
+		padding-top: 3em;
+		padding-bottom: 3em;
+	}
 }
 .s {
 	&--blue {
@@ -66,15 +74,30 @@
 		background-image: url(../img/general/points-light.png);
 		background-repeat: repeat-y;
 		background-position: 30% 35%;
+		@media (max-width: 991px){
+			background-size:  auto 40px;
+		}
+		@media (max-width: 700px){
+			background-size:  auto 30px;
+		}
 	}
 	&--point-dark {
 		background-image: url(../img/general/points-dark.png);
 		background-repeat: repeat-y;
 		background-position: 90% 35%;
+		@media (max-width: 991px){
+			background-size:  auto 40px;
+		}
+		@media (max-width: 700px){
+			background-size: auto 30px;
+		}
 	}
 }
 .mini {
 	&__row {
+		.title {
+			flex-shrink: 0.1;
+		}
 		@media (min-width: 720px){
 			display: flex;
 			justify-content: space-between;
@@ -83,11 +106,18 @@
 		@media (min-width: 1100px){
 			gap: 3em;
 		}
-		@media (max-width: 767px){
+		@media (max-width: 991px){
 			flex-wrap: wrap;
+			padding-left: 30px;
+			.title {
+				width: 100%;
+			}
+			ul {
+				list-style-position: inside;
+			}
 		}
-		.title {
-			flex-shrink: 0.1;
+		@media (max-width: 600px){
+			padding-left: 15px;
 		}
 	}
 	&__text {
@@ -95,9 +125,16 @@
 		@media (min-width: 1100px){
 			max-width: 420px;
 		}
+		@media (max-width: 991px){
+			padding-top: 0.5em;
+			width: 100%;
+		}
 		p {padding-bottom: 0;}
 	}
 	&__cta {
 		padding-top: 2em;
+		@media (max-width: 991px){
+			padding-top: 1.8em;
+		}
 	}
 }

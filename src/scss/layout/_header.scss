@@ -1,7 +1,6 @@
 .header {
 	position: relative;
 	z-index: 11;
-	transition: .3s;
 	@media (min-width: 1024px){
 		border-bottom: 1px solid $border-light;
 	}
@@ -18,6 +17,8 @@
 		z-index: 3;
 		@media (max-width: 500px){
 			padding: .6em .4em;
+			min-width: 110px;
+			font-size: em(14);
 			&>.arrow {
 				display: none;
 			}

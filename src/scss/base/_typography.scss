@@ -58,6 +58,9 @@ p {
 	@media (max-width: 767px){
 		font-size: em(34);
 	}
+	@media (max-width: 600px){
+		font-size: em(28);
+	}
 }
 .h3 {
 	font-weight: 800;
@@ -97,8 +100,25 @@ p {
 	&--sm {
 		max-width: 230px;
 	}
+	&--decor-1 {
+		width: fit-content;
+		&:after {
+			content: '';
+			position: absolute;
+			width: 6.6em;
+			height: 6.6em;
+			left: 12em;
+			top: -4em;
+			background-image: url(../img/general/dots-light.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+	}
 	@media (max-width: 767px){
 		margin-bottom: 2em;
 		padding-bottom: 0.5em;
+	}
+	@media (max-width: 600px){
+		margin-bottom: 1.2em;
 	}
 }
