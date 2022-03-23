@@ -112,6 +112,12 @@ p {
 	&--sm {
 		max-width: 230px;
 	}
+	&--md {
+		max-width: 520px;
+	}
+	&--lg {
+		max-width: 754px;
+	}
 	&--decor-1 {
 		width: fit-content;
 		&:after {
@@ -136,5 +142,26 @@ p {
 	}
 	@media (max-width: 600px){
 		margin-bottom: 1.2em;
+	}
+}
+.columns-list {
+	list-style-type: disc;
+	list-style-position: inside;
+	@media (min-width: 540px){
+		columns: 2;
+		column-gap: 2.1em;
+	}
+	@media (min-width: 1024px){
+		&--three {
+			columns: 3;
+		}
+	}
+	li {
+		break-inside: avoid;
+		padding-right: .4em;
+		padding-bottom: 0.4em;
+		@media (max-width: 991px){
+			font-size: em(16);
+		}
 	}
 }
