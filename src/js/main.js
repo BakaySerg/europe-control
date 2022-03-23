@@ -137,6 +137,7 @@
 			},
 			1300: {
 				slidesPerView: 6,
+				spaceBetween: 20,
 			}
 		}
 	});
