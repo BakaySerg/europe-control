@@ -1,13 +1,24 @@
 [data-tab]:not([data-tab=active]) {
-	display: none!important;
+	opacity: 0;
+	visibility: hidden;
+	transform: scale(0);
+	position: absolute;
 }
 .tabs-headlines {
 	display: flex;
 	justify-content: center;
 	gap: .5em 4em;
 	flex-wrap: wrap;
-	padding-top: 3em;
+	padding-top: 4em;
 	padding-bottom: 2em;
+	max-width: 1220px;
+	@media (max-width: 1023px){
+		padding-top: 2em;
+		padding-bottom: 1em;
+	}
+	@media (max-width: 767px){
+		gap: 0.3em 0.5em;
+	}
 }
 .tab {
 	font-weight: 800;
@@ -17,13 +28,80 @@
 	transition: .3s;
 	&:hover,&.active {
 		color: $yellow;
+		text-decoration: underline;
+		text-decoration-color: rgba($yellow,30%);
 	}
 	@media (min-width: 1100px){
 		font-size: em(26);
 	}
+	@media (max-width: 767px){
+		font-size: em(18);
+	}
+	@media (max-width: 420px){
+		font-size: em(16);
+	}
 	&__pane {
+		@media (min-width: 1024px){
+			display: flex;
+			justify-content: space-evenly;
+			gap: 3em;
+		}
+		background-image: url(../img/general/texture.png);
+		background-position: center;
+		padding-top: 4em;
+		padding-bottom: 4em;
+		@media (max-width: 1023px){
+			padding-top: 2em;
+			padding-bottom: 1.1em;
+		}
+		@media (max-width: 767px){
+			padding-top: 1em;
+			background-size: auto 100%;
+		}
+	}
+	&__pict {
+		flex-shrink: 0.1;
+		min-width: calc(45% - 2em);
+		transition: .7s ease-in-out;
+	}
+	&__pane[data-tab] {
+		.tab__pict,.tab__text {
+			opacity: .3;
+			-webkit-clip-path: polygon(0 0,.1% 0,0 100%,0 100%);
+			clip-path: polygon(0 0,.1% 0,0 100%,0 100%);
+		}
+	}
+	&__pane[data-tab=active] {
+		.tab__pict,.tab__text  {
+			opacity: 1;
+			-webkit-clip-path: polygon(0 0,136% 0,100% 100%,0 100%);
+			clip-path: polygon(0 0,136% 0,100% 100%,0 100%);
+		}
+	}
+	&__text {
 		display: flex;
-		justify-content: space-around;
-		gap: 3em;
+		flex-wrap: wrap;
+		flex-direction: column;
+		flex-grow: .3;
+		min-width: 39%;
+		max-width: 40%;
+		transition: .8s ease-in-out .2s;
+		@media (max-width: 1023px){
+			max-width: none;
+			padding-top: 1.3em;
+			transition: .7s ease-in-out;
+		}
+		.h3 {
+			text-decoration: underline;
+			text-decoration-color: rgba($white,30%);
+			padding-bottom: .6em;
+		}
+		p {
+			font-size: em(14);
+		}
+		a.btn {
+			align-self: flex-start;
+			margin-top: auto;
+		}
 	}
 }

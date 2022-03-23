@@ -7,4 +7,13 @@
 	width: 24px;
 	height: 24px;
 	color: $yellow;
+	&--md {
+		width: 37px;
+		height: 37px;
+		color: inherit;
+		@media (max-width: 991px){
+			width: 34px;
+			height: 34px;
+		}
+	}
 }

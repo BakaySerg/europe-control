@@ -113,5 +113,33 @@
 	};
 	tabSwitcher();
 
+	//slider-brands
+	const swiper2 = new Swiper(".brand__slider", {
+		draggable:true,
+		grabCursor: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 3,
+				pagination: {
+					el: ".swiper-pagination",
+					// type: "bullets",
+					dynamicBullets: true,
+					clickable: true,
+				}
+			},
+			720: {
+				slidesPerView: 5,
+				centeredSlides:false,
+			},
+			1300: {
+				slidesPerView: 6,
+			}
+		}
+	});
+
 
 });
