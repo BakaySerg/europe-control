@@ -43,7 +43,7 @@
 		}
 		&:before {
 			background: url(../img/general/dots-light-1.svg) top no-repeat;
-			top: -3em;
+			top: 1em;
 			left: -2.6em;
 			@media (max-width: 1100px){
 				left: 20px;
@@ -66,6 +66,9 @@
 		max-width: 750px;
 		margin-top: 5.3em;
 		margin-bottom: 3em;
+		&--lg {
+			max-width: 892px;
+		}
 		@media (min-width: 1600px){
 			margin-top: 6.4em;
 		}
@@ -85,4 +88,10 @@
 	background-position: center;
 	color: $white;
 	padding-bottom: 3em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	@media (min-width: 1200px){
+		min-height: 76vh;
+	}
 }
