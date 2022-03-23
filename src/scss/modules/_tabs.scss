@@ -1,3 +1,29 @@
 [data-tab]:not([data-tab=active]) {
 	display: none!important;
 }
+.tabs-headlines {
+	display: flex;
+	justify-content: center;
+	gap: .5em 4em;
+	flex-wrap: wrap;
+	padding-top: 3em;
+	padding-bottom: 2em;
+}
+.tab {
+	font-weight: 800;
+	user-select: none;
+	cursor: pointer;
+	padding: .1em .3em;
+	transition: .3s;
+	&:hover,&.active {
+		color: $yellow;
+	}
+	@media (min-width: 1100px){
+		font-size: em(26);
+	}
+	&__pane {
+		display: flex;
+		justify-content: space-around;
+		gap: 3em;
+	}
+}
