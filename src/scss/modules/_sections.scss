@@ -187,6 +187,55 @@
 	}
 }
 .shifted {
-	max-width: 1000px;
+	max-width: 1050px;
 	margin-left: auto;
+	@media (min-width: 1400px){
+		margin-right: -60px;
+	}
+	@media (max-width: 1366px){
+		max-width: 960px;
+	}
+}
+.decor-chess {
+	@media (min-width: 1200px){
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 1%;
+			right: 84%;
+			background-image: url(../img/services/escrow/chess.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 34vmin;
+			max-width: 330px;
+			height: 46vmin;
+			max-height: 440px;
+		}
+	}
+	@media (max-width: 1366px){
+		&:before {
+			bottom: 9%;
+		}
+	}
+}
+.benef {
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+		grid-gap: 28px 30px;
+	}
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: url(../img/general/circle.svg) center no-repeat;
+		background-size: contain;
+		width: 4.4em;
+		height: 4.4em;
+		margin-bottom: 0.9em;
+		@media (max-width: 767px){
+			width: 3.8em;
+			height: 3.8em;
+		}
+	}
 }
