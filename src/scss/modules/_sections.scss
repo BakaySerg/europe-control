@@ -26,6 +26,16 @@
 .s--muted-glass {
 	background-color: $muted;
 }
+.s--dots {
+	@media (min-width: 720px){
+		background-image: url(../img/services/escrow/texture.png);
+		background-position: center 30%;
+		background-repeat: no-repeat;
+	}
+	@media (max-width: 991px){
+		background-size: 100% auto;
+	}
+}
 .art {
 	&__row {
 		@media (min-width: 768px){
@@ -236,6 +246,53 @@
 		@media (max-width: 767px){
 			width: 3.8em;
 			height: 3.8em;
+		}
+	}
+}
+.half {
+	&__container {
+		max-width: 100%;
+		@media (min-width: 1024px){
+			padding: 0;
+		}
+	}
+	&__row {
+		@media (min-width: 1024px){
+			display: flex;
+			align-items: center;
+			&--turned {
+				flex-direction: row-reverse;
+			}
+			&>div {
+				width: 50%;
+				flex: 1 1 50%;
+			}
+		}
+	}
+	&__text {
+		padding-top: 1em;
+		padding-bottom: 1em;
+		@media (min-width: 1024px){
+			max-width: 535px;
+			margin-left: calc(4vw + 2em);
+			margin-right: auto;
+			padding-right: 15px;
+			&--first {
+				margin-right: calc(4vw + 2em);
+				margin-left: auto;
+				padding-left: 15px;
+			}
+		}
+		@media (min-width: 1024px) and (max-width: 1100px){
+			max-width: 560px;
+			font-size: .92em;
+			margin-left: calc(2vw + 1em);
+			&--first {
+				margin-right: calc(2vw + 1em);
+			}
+		}
+		@media (max-width: 1023px){
+			padding-top: 1.6em;
 		}
 	}
 }

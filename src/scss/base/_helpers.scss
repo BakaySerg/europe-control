@@ -58,6 +58,9 @@
 	@media (max-width: 800px) {
 		padding-top: 2em;
 	}
+	@media (max-width: 600px){
+		padding-top: 1em;
+	}
 }
 [hidden] {
 	display: none!important;
