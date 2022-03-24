@@ -68,12 +68,20 @@ p {
 	font-size: em(27);
 	line-height: 1.2;
 	padding-bottom: 0.5em;
-	@media (max-width: 767px){
+	&--light {
+		font-weight: 400;
+	}
+	@media (max-width: 991px){
 		font-size: em(24);
 	}
 	@media (max-width: 600px){
 		font-size: em(20);
 	}
+}
+.h5 {
+	font-weight: 800;
+	font-size: 1em;
+	padding-bottom: 0.8em;
 }
 .accent {
 	color: $yellow;
@@ -130,9 +138,18 @@ p {
 			background-image: url(../img/general/dots-light.svg);
 			background-repeat: no-repeat;
 			background-size: contain;
+			@media (max-width: 1100px){
+				top: -3em;
+			}
 			@media (max-width: 991px){
 				left: 11em;
 				top: -2em;
+			}
+			@media (max-width: 600px){
+				top: -1.6em;
+				left: 8em;
+				width: 4em;
+				height: 4em;
 			}
 		}
 	}

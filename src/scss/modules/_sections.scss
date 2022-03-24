@@ -13,6 +13,10 @@
 		padding-top: 3em;
 		padding-bottom: 2.8em;
 	}
+	@media (max-width: 400px){
+		padding-top: 2.6em;
+		padding-bottom: 2.2em;
+	}
 }
 .s--map {
 	@media (min-width: 768px){
@@ -64,6 +68,10 @@
 		padding-top: 3em;
 		padding-bottom: 3em;
 	}
+	@media (max-width: 400px){
+		padding-top: 2.4em;
+		padding-bottom: 2.4em;
+	}
 }
 .s {
 	&--blue {
@@ -95,6 +103,17 @@
 		background-image: url(../img/general/points-dark.png);
 		background-repeat: repeat-y;
 		background-position: 90% 35%;
+		@media (max-width: 991px){
+			background-size:  auto 40px;
+		}
+		@media (max-width: 700px){
+			background-size: auto 30px;
+		}
+	}
+	&--point-dark-2 {
+		background-image: url(../img/general/points-dark-2.png);
+		background-repeat: repeat-y;
+		background-position: 9% 35%;
 		@media (max-width: 991px){
 			background-size:  auto 40px;
 		}
@@ -139,6 +158,9 @@
 			padding-top: 0.5em;
 			width: 100%;
 		}
+		@media (max-width: 600px){
+			font-size: em(17);
+		}
 		p {padding-bottom: 0;}
 	}
 	&__cta {
@@ -154,6 +176,13 @@
 			display: grid;
 			grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
 			grid-gap: 28px 25px;
+		}
+		@media (max-width: 1200px){
+			&--title {
+				.title {
+					grid-column: 1 / -1;
+				}
+			}
 		}
 	}
 	&__item {
@@ -251,7 +280,7 @@
 }
 .half {
 	&__container {
-		max-width: 100%;
+		max-width: 1920px;
 		@media (min-width: 1024px){
 			padding: 0;
 		}
@@ -278,7 +307,7 @@
 			margin-right: auto;
 			padding-right: 15px;
 			&--first {
-				margin-right: calc(4vw + 2em);
+				margin-right: calc(3vw + 1em);
 				margin-left: auto;
 				padding-left: 15px;
 			}
@@ -293,6 +322,140 @@
 		}
 		@media (max-width: 1023px){
 			padding-top: 1.6em;
+		}
+	}
+}
+.paragraph {
+	&__line {
+		position: relative;
+		&:not(:last-child) {
+			border-bottom: 1px solid $border-light;
+		}
+		&:last-child {
+			@media (min-width: 1200px){
+				padding-bottom: 2em;
+			}
+			@media (min-width: 768px){
+				&:before {
+					content: "";
+					position: absolute;
+					width: 9em;
+					height: 9em;
+					background-image: url(../img/general/dots-light-4.svg);
+					background-repeat: no-repeat;
+					top: 33%;
+					left: 65%;
+				}
+			}
+			@media (max-width: 1100px){
+				&:before {
+					width: 5.6em;
+					height: 5.6em;
+					left: 89%;
+					top: 20%;
+					background-size: contain;
+				}
+			}
+		}
+	}
+	&__row {
+		padding-top: 3.6em;
+		padding-bottom: 2.5em;
+		@media (min-width: 1200px){
+			display: grid;
+			grid-template-columns: repeat(auto-fill,minmax(330px,1fr));
+			grid-gap: 28px 26px;
+		}
+		@media (max-width: 1199px){
+			padding-top: 2.5em;
+			padding-bottom: 1.8em;
+		}
+		@media (max-width: 600px){
+			padding-top: 2em;
+			padding-bottom: 0.7em;
+		}
+	}
+	&__item {
+		p {
+			font-size: em(17);
+		}
+		@media (max-width: 1199px){
+			&:not(:last-child) {
+				padding-bottom: 1em;
+			}
+		}
+	}
+	&__title {
+		display: flex;
+		align-items: center;
+		gap: .9em;
+		padding-bottom: 1.2em;
+		@media (max-width: 600px){
+			gap: .6em;
+		}
+		.h3 {
+			padding-bottom: 0;
+		}
+		&::before {
+			content: '';
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+			background-color: currentColor;
+			border: 7px solid $yellow;
+			@media (max-width: 600px){
+				width: 16px;
+				height: 16px;
+				border-width: 5px;
+			}
+		}
+	}
+}
+.flex-lg {
+	@media (min-width: 1280px){
+		display: flex;
+		gap: 3.9em;
+	}
+}
+.arr {
+	&__grid {
+		padding-top: 1.8em;
+		@media (min-width: 768px){
+			padding-top: 2.6em;
+			display: grid;
+			grid-template-columns: repeat(auto-fill,minmax(430px,1fr));
+			grid-gap: 28px 26px;
+		}
+	}
+	&__item	{
+		display: flex;
+		gap: 1em;
+		@media (max-width: 700px){
+			gap: 0.6em;
+		}
+	}
+	&__icon {
+		flex-shrink: 0;
+		width: 2.9em;
+		height: 2.9em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: inherit;
+		background-color: $yellow;
+		border-radius: 50%;
+		position: relative;
+		top: -.5em;
+		.icon {color: inherit;}
+		@media (max-width: 700px){
+			width: 2em;
+			height: 2em;
+			top: -2px;
+			left: -5px;
+			.icon {
+				width: 18px;
+				height: 18px;
+			}
 		}
 	}
 }
