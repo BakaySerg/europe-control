@@ -31,6 +31,11 @@
 p {
 	padding-bottom: 1.2em;
 }
+ul {
+	list-style-type: disc;
+	list-style-position: outside;
+	padding-left: 1em;
+}
 .list {
 	list-style-type: disc;
 	list-style-position: outside;
@@ -72,8 +77,8 @@ p {
 .h3 {
 	font-weight: 800;
 	font-size: em(27);
-	line-height: 1.2;
 	padding-bottom: 0.5em;
+	line-height: 1.66;
 	&--light {
 		@media (min-width: 768px){
 			font-weight: 400;
@@ -83,6 +88,7 @@ p {
 		font-size: em(24);
 	}
 	@media (max-width: 600px){
+		line-height: 1.5;
 		font-size: em(20);
 	}
 }

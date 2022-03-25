@@ -295,6 +295,19 @@
 			height: 57vmin;
 			max-height: 550px;
 		}
+		&--2:before {
+			content: '';
+			position: absolute;
+			top: 10%;
+			left: 83.8%;
+			background-image: url(../img/services/quality-control/texture-3.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 50vmin;
+			max-width: 444px;
+			height: 34vmin;
+			max-height: 220px;
+		}
 	}
 	@media (max-width: 1366px){
 		&:before {
@@ -317,7 +330,7 @@
 .benef {
 	&__grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
+		grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
 		grid-gap: 28px 30px;
 	}
 	&__icon {
@@ -475,12 +488,21 @@
 		gap: 3.9em;
 		.title {
 			min-width: 270px;
+			&--md {
+				min-width: 310px;
+			}
 		}
 	}
 	@media (min-width: 1024px) and (max-width: 1280px){
 		.title {
 			margin-bottom: 0.9em;
 		}
+	}
+}
+.lim {
+	max-width: 950px;
+	&--md {
+		max-width: 1020px;
 	}
 }
 .lim-center {
