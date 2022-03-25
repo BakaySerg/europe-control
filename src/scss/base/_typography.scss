@@ -31,6 +31,12 @@
 p {
 	padding-bottom: 1.2em;
 }
+.list {
+	list-style-type: disc;
+	list-style-position: outside;
+	padding-left: 1.1em;
+	li {padding-bottom: .7em;}
+}
 .h1 {
 	font-family: $add-font;
 	font-weight: 900;
@@ -69,9 +75,11 @@ p {
 	line-height: 1.2;
 	padding-bottom: 0.5em;
 	&--light {
-		font-weight: 400;
+		@media (min-width: 768px){
+			font-weight: 400;
+		}
 	}
-	@media (max-width: 991px){
+	@media (max-width: 1024px){
 		font-size: em(24);
 	}
 	@media (max-width: 600px){
@@ -163,10 +171,12 @@ p {
 }
 .columns-list {
 	list-style-type: disc;
-	list-style-position: inside;
+	list-style-position: outside;
+	padding-left: .8em;
 	@media (min-width: 540px){
 		columns: 2;
 		column-gap: 2.1em;
+		padding-left: 1em;
 	}
 	@media (min-width: 1024px){
 		&--three {
@@ -176,7 +186,8 @@ p {
 	li {
 		break-inside: avoid;
 		padding-right: .4em;
-		padding-bottom: 0.4em;
+		padding-bottom: .7em;
+		padding-left: .3em;
 		@media (max-width: 991px){
 			font-size: em(16);
 		}

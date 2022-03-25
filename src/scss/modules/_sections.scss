@@ -36,8 +36,8 @@
 		background-position: center 30%;
 		background-repeat: no-repeat;
 	}
-	@media (max-width: 991px){
-		background-size: 100% auto;
+	@media (max-width: 1200px){
+		background-size: contain;
 	}
 }
 .art {
@@ -78,9 +78,15 @@
 		color: $white;
 		background-color: $blue;
 	}
+	&--white {
+		background-color: $white;
+	}
 	&--dark {
 		color: $white;
 		background-color: $dark;
+		ul {
+			::marker {color: $yellow;}
+		}
 	}
 	&--yellow {
 		background-color: $yellow;
@@ -228,11 +234,34 @@
 .shifted {
 	max-width: 1050px;
 	margin-left: auto;
+	flex-grow: 1;
+	&--sm {
+		max-width: 918px;
+	}
+	&--md {
+		max-width: 990px;
+	}
 	@media (min-width: 1400px){
 		margin-right: -60px;
 	}
 	@media (max-width: 1366px){
 		max-width: 960px;
+	}
+}
+.decor-lines {
+	@media (min-width: 1024px){
+		position: relative;
+		z-index: 1;
+		&::before {
+			content: '';
+			position: absolute;
+			left: -4%;
+			bottom: -4%;
+			width: 108%;
+			height: 104%;
+			background-image: url(../img/general/texture.png);
+			background-position: center;
+		}
 	}
 }
 .decor-chess {
@@ -250,10 +279,35 @@
 			height: 46vmin;
 			max-height: 440px;
 		}
+		&--1:before {
+			content: '';
+			position: absolute;
+			top: 1%;
+			left: 83.8%;
+			background-image: url(../img/services/trustee/chess.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 34vmin;
+			max-width: 332px;
+			height: 57vmin;
+			max-height: 550px;
+		}
 	}
 	@media (max-width: 1366px){
 		&:before {
 			bottom: 9%;
+		}
+	}
+	@media (max-width: 1280px){
+		&:before {
+			right: 78.9%;
+			width: 27vmin;
+			height: 43vmin;
+		}
+		&--1:before {
+			left: 78.8%;
+			width: 27vmin;
+			height: 45vmin;
 		}
 	}
 }
@@ -300,9 +354,9 @@
 	}
 	&__text {
 		padding-top: 1em;
-		padding-bottom: 1em;
+		padding-bottom: .5em;
 		@media (min-width: 1024px){
-			max-width: 535px;
+			max-width: 560px;
 			margin-left: calc(4vw + 2em);
 			margin-right: auto;
 			padding-right: 15px;
@@ -314,10 +368,11 @@
 		}
 		@media (min-width: 1024px) and (max-width: 1100px){
 			max-width: 560px;
-			font-size: .92em;
-			margin-left: calc(2vw + 1em);
+			font-size: .9em;
+			margin-left: calc(1vw + 1em);
+			margin-right: auto;
 			&--first {
-				margin-right: calc(2vw + 1em);
+				margin-right: calc(1vw + 1em);
 			}
 		}
 		@media (max-width: 1023px){
@@ -415,7 +470,20 @@
 	@media (min-width: 1280px){
 		display: flex;
 		gap: 3.9em;
+		.title {
+			min-width: 270px;
+		}
 	}
+	@media (min-width: 1024px) and (max-width: 1280px){
+		.title {
+			margin-bottom: 0.9em;
+		}
+	}
+}
+.lim-center {
+	max-width: 630px;
+	margin-left: auto;
+	margin-right: auto;
 }
 .arr {
 	&__grid {
@@ -423,15 +491,27 @@
 		@media (min-width: 768px){
 			padding-top: 2.6em;
 			display: grid;
-			grid-template-columns: repeat(auto-fill,minmax(430px,1fr));
+			grid-template-columns: repeat(auto-fill,minmax(408px,1fr));
 			grid-gap: 28px 26px;
+		}
+		@media (min-width: 1200px){
+			&--4 {
+				grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+			}
 		}
 	}
 	&__item	{
 		display: flex;
 		gap: 1em;
+		p {
+			opacity: 0.86;
+			font-size: em(17);
+		}
 		@media (max-width: 700px){
 			gap: 0.6em;
+			&:not(:last-child) {
+				padding-bottom: 0.4em;
+			}
 		}
 	}
 	&__icon {
@@ -446,7 +526,7 @@
 		border-radius: 50%;
 		position: relative;
 		top: -.5em;
-		.icon {color: inherit;}
+		.icon {color: $text;}
 		@media (max-width: 700px){
 			width: 2em;
 			height: 2em;
