@@ -193,3 +193,13 @@ p {
 		}
 	}
 }
+.columns-text {
+	@media (min-width: 600px){
+		columns: 2;
+		column-gap: 2.1em;
+		padding-left: 1em;
+	}
+	div,p {
+		break-inside: avoid;
+	}
+}
