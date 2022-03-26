@@ -78,6 +78,7 @@
 		color: $white;
 		background-color: $blue;
 		ul {
+			color: rgba($white,.9);
 			::marker {color: $yellow;}
 		}
 	}
@@ -251,6 +252,23 @@
 		max-width: 960px;
 	}
 }
+.decor-dots {
+	@media (min-width: 1200px){
+		&:before {
+			content: "";
+			position: absolute;
+			width: 9em;
+			height: 9em;
+			background-image: url(../img/general/dots-light-4.svg);
+			background-repeat: no-repeat;
+			top: 27%;
+			right: -15%;
+		}
+		&--1::before {
+			right: 10%;
+		}
+	}
+}
 .decor-lines {
 	@media (min-width: 1024px){
 		position: relative;
@@ -406,27 +424,6 @@
 			@media (min-width: 1200px){
 				padding-bottom: 2em;
 			}
-			@media (min-width: 768px){
-				&:before {
-					content: "";
-					position: absolute;
-					width: 9em;
-					height: 9em;
-					background-image: url(../img/general/dots-light-4.svg);
-					background-repeat: no-repeat;
-					top: 33%;
-					left: 65%;
-				}
-			}
-			@media (max-width: 1100px){
-				&:before {
-					width: 5.6em;
-					height: 5.6em;
-					left: 89%;
-					top: 20%;
-					background-size: contain;
-				}
-			}
 		}
 	}
 	&__row {
@@ -436,6 +433,10 @@
 			display: grid;
 			grid-template-columns: repeat(auto-fill,minmax(330px,1fr));
 			grid-gap: 28px 26px;
+			&--2 {
+				grid-template-columns: repeat(2,1fr);
+				grid-gap: 0 calc(2vw + 2.9em);
+			}
 		}
 		@media (max-width: 1199px){
 			padding-top: 2.5em;
@@ -449,11 +450,21 @@
 	&__item {
 		p {
 			font-size: em(17);
+			opacity: 0.9;
 		}
 		@media (max-width: 1199px){
 			&:not(:last-child) {
 				padding-bottom: 1em;
 			}
+		}
+	}
+	&__list {
+		@media (min-width: 1200px){
+			padding-top: 0.3em;
+		}
+		li {
+			color: rgba($white,.9);
+			padding-bottom: 1em;
 		}
 	}
 	&__title {
@@ -490,6 +501,7 @@
 			min-width: 270px;
 			&--md {
 				min-width: 310px;
+				max-width: 340px;
 			}
 		}
 	}

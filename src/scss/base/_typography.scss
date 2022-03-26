@@ -188,6 +188,12 @@ ul {
 		&--three {
 			columns: 3;
 		}
+		&--divided {
+			margin-bottom: -1.2em;
+			li:nth-child(even) {
+				margin-bottom: 1.8em;
+			}
+		}
 	}
 	li {
 		break-inside: avoid;
