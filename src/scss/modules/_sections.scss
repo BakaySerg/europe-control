@@ -5,7 +5,7 @@
 		padding-top: 5em;
 		padding-bottom: 4.2em;
 	}
-	@media (max-width: 767px){
+	@media (max-width: 991px){
 		padding-top: 4em;
 		padding-bottom: 3.8em;
 	}
@@ -35,6 +35,14 @@
 		background-image: url(../img/services/escrow/texture.png);
 		background-position: center 30%;
 		background-repeat: no-repeat;
+		&--1 {
+			background-position: 136% -5%;
+			background-size: 86% auto;
+		}
+		&--2 {
+			background-position: 60% -5%;
+			background-size: 94% auto;
+		}
 	}
 	@media (max-width: 1200px){
 		background-size: contain;
@@ -186,6 +194,9 @@
 			display: grid;
 			grid-template-columns: repeat(auto-fill,minmax(260px,1fr));
 			grid-gap: 28px 25px;
+			&--3 {
+				grid-template-columns: repeat(auto-fill,minmax(304px,1fr));
+			}
 		}
 		@media (max-width: 1200px){
 			&--title {
@@ -197,15 +208,38 @@
 	}
 	&__item {
 		.h3 {
-			padding-top: 0.6em;
-			padding-bottom: 1.1em;
+			padding-top: .6em;
+			padding-bottom: .9em;
 			@media (max-width: 991px){
-				padding-top: 0.3em;
-				padding-bottom: 0.8em;
+				padding-top: .3em;
+				padding-bottom: .8em;
 			}
 		}
 		p {
 			font-size: em(17);
+		}
+		.list {
+			@media (max-width: 991px){
+				padding-bottom: 1em;
+			}
+		}
+	}
+	&__icon {
+		display: block;
+		border-radius: 50%;
+		width: 3.8em;
+		height: 3.8em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@media (max-width: 991px){
+			width: 3em;
+			height: 3em;
+			margin-bottom: 0.4em;
+		}
+		&--blue {
+			color: $white;
+			background-color: $blue;
 		}
 	}
 }
@@ -250,99 +284,6 @@
 	}
 	@media (max-width: 1366px){
 		max-width: 960px;
-	}
-}
-.decor-dots {
-	@media (min-width: 1200px){
-		&:before {
-			content: "";
-			position: absolute;
-			width: 9em;
-			height: 9em;
-			background-image: url(../img/general/dots-light-4.svg);
-			background-repeat: no-repeat;
-			top: 27%;
-			right: -15%;
-		}
-		&--1::before {
-			right: 10%;
-		}
-	}
-}
-.decor-lines {
-	@media (min-width: 1024px){
-		position: relative;
-		z-index: 1;
-		&::before {
-			content: '';
-			position: absolute;
-			left: -4%;
-			bottom: -4%;
-			width: 108%;
-			height: 104%;
-			background-image: url(../img/general/texture.png);
-			background-position: center;
-		}
-	}
-}
-.decor-chess {
-	@media (min-width: 1200px){
-		&:before {
-			content: '';
-			position: absolute;
-			bottom: 1%;
-			right: 84%;
-			background-image: url(../img/services/escrow/chess.png);
-			background-repeat: no-repeat;
-			background-size: contain;
-			width: 34vmin;
-			max-width: 330px;
-			height: 46vmin;
-			max-height: 440px;
-		}
-		&--1:before {
-			content: '';
-			position: absolute;
-			top: 1%;
-			left: 83.8%;
-			background-image: url(../img/services/trustee/chess.png);
-			background-repeat: no-repeat;
-			background-size: contain;
-			width: 34vmin;
-			max-width: 332px;
-			height: 57vmin;
-			max-height: 550px;
-		}
-		&--2:before {
-			content: '';
-			position: absolute;
-			top: 10%;
-			left: 83.8%;
-			background-image: url(../img/services/quality-control/texture-3.png);
-			background-repeat: no-repeat;
-			background-size: contain;
-			width: 50vmin;
-			max-width: 444px;
-			height: 34vmin;
-			max-height: 220px;
-		}
-	}
-	@media (max-width: 1366px){
-		&:before {
-			bottom: 9%;
-		}
-	}
-	@media (max-width: 1280px){
-		&:before {
-			right: 78.9%;
-			width: 27vmin;
-			height: 43vmin;
-		}
-		&--1:before {
-			left: 78.8%;
-			width: 27vmin;
-			height: 45vmin;
-		}
 	}
 }
 .benef {
@@ -516,9 +457,12 @@
 	&--md {
 		max-width: 1020px;
 	}
+	&--lg {
+		max-width: 1090px;
+	}
 }
 .lim-center {
-	max-width: 630px;
+	max-width: 730px;
 	margin-left: auto;
 	margin-right: auto;
 }

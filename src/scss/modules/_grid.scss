@@ -1,0 +1,31 @@
+.grid {
+	@media (min-width: 720px){
+		display: grid;
+		gap: 0 3em;
+		&--3 {
+			grid-template-columns: repeat(3,1fr);
+		}
+	}
+	@media (max-width: 1023px){
+		&--3 {
+			grid-template-columns: repeat(2,1fr);
+		}
+	}
+}
+.abbr {
+	&__item {
+		@media (min-width: 1024px){
+			padding-bottom: 0;
+		}
+	}
+	font-weight: 800;
+	color: $blue;
+	text-transform: uppercase;
+	font-size: em(28);
+	@media (max-width: 991px){
+		font-size: em(24);
+	}
+	@media (max-width: 600px){
+		font-size: em(22);
+	}
+}

@@ -64,7 +64,12 @@
 		padding-top: 2em;
 	}
 	@media (max-width: 600px){
-		padding-top: 1.2em;
+		padding-top: 1em;
+	}
+}
+.pt-sm-1 {
+	@media (max-width: 1023px){
+		padding-top: 15px;
 	}
 }
 [hidden] {
@@ -94,6 +99,6 @@
 	align-items: center;
 	justify-content: center;
 }
-// .color-accent {
-// 	color: $color-accent;
-// }
+.color-blue {
+	color: $blue;
+}

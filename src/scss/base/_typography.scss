@@ -4,7 +4,8 @@
 	font-weight: 400;
 	font-style: normal;
 	opacity: .6;
-	padding-bottom: .6em;
+	padding-bottom: .8em;
+	display: block;
 	@media (max-width: 991px){
 		font-size: em(15);
 	}
@@ -78,7 +79,7 @@ ul {
 	font-weight: 800;
 	font-size: em(27);
 	padding-bottom: 0.5em;
-	line-height: 1.66;
+	line-height: 1.44;
 	&--light {
 		@media (min-width: 768px){
 			font-weight: 400;
@@ -138,7 +139,7 @@ ul {
 		max-width: 520px;
 	}
 	&--lg {
-		max-width: 754px;
+		max-width: 758px;
 	}
 	&--decor-1 {
 		width: fit-content;
@@ -172,7 +173,7 @@ ul {
 		padding-bottom: 0.5em;
 	}
 	@media (max-width: 600px){
-		margin-bottom: 1.2em;
+		margin-bottom: 1em;
 	}
 }
 .columns-list {
@@ -209,7 +210,11 @@ ul {
 	@media (min-width: 600px){
 		columns: 2;
 		column-gap: 2.1em;
-		padding-left: 1em;
+	}
+	@media (min-width: 1200px){
+		&--3 {
+			columns: 3;
+		}
 	}
 	div,p {
 		break-inside: avoid;
