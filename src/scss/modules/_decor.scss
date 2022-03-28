@@ -11,7 +11,10 @@
 			right: -15%;
 		}
 		&--1::before {
-			right: -6%;
+			right: 1%;
+		}
+		&--3::before {
+			right: 8%;
 		}
 		&--2::before {
 			top: auto;
@@ -93,6 +96,19 @@
 			background-size: contain;
 			width: 46vmin;
 			max-width: 440px;
+			height: 34vmin;
+			max-height: 330px;
+		}
+		&--4:before {
+			content: '';
+			position: absolute;
+			top: 10%;
+			left: 83.8%;
+			background-image: url(../img/services/quality-assurance/chess.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 34vmin;
+			max-width: 332px;
 			height: 34vmin;
 			max-height: 330px;
 		}

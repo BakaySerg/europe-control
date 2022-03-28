@@ -437,7 +437,7 @@
 .flex-lg {
 	@media (min-width: 1280px){
 		display: flex;
-		gap: 3.9em;
+		gap: 3.7em;
 		.title {
 			min-width: 270px;
 			&--md {
@@ -508,6 +508,10 @@
 		position: relative;
 		top: -.5em;
 		.icon {color: $text;}
+		&--blue {
+			background-color: $blue;
+			.icon {color: $white;}
+		}
 		@media (max-width: 700px){
 			width: 2em;
 			height: 2em;
