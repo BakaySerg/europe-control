@@ -51,7 +51,7 @@
 			content: '';
 			position: absolute;
 			bottom: 1%;
-			right: 84%;
+			right: 84.7%;
 			background-image: url(../img/services/escrow/chess.png);
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -59,6 +59,14 @@
 			max-width: 330px;
 			height: 46vmin;
 			max-height: 440px;
+		}
+		&--0:before{
+			background-image: url(../img/services/quality-management/chess.png);
+			width: 46vmin;
+			max-width: 440px;
+			height: 56vmin;
+			max-height: 550px;
+			bottom: -5%;
 		}
 		&--1:before {
 			content: '';
@@ -123,6 +131,10 @@
 			right: 78.9%;
 			width: 27vmin;
 			height: 43vmin;
+		}
+		&::before {
+			width: 32vmin;
+			height: 48vmin;
 		}
 		&--1:before {
 			left: 78.8%;

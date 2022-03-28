@@ -241,6 +241,10 @@
 			color: $white;
 			background-color: $blue;
 		}
+		&--yellow {
+			background-color: $yellow;
+			color: $blue;
+		}
 	}
 }
 .brand__container {
@@ -426,10 +430,18 @@
 			height: 20px;
 			background-color: currentColor;
 			border: 7px solid $yellow;
+			flex-shrink: 0;
 			@media (max-width: 600px){
 				width: 16px;
 				height: 16px;
 				border-width: 5px;
+			}
+		}
+		&--top {
+			padding-bottom: 0;
+			&::before {
+				align-self: flex-start;
+				margin-top: .3em;
 			}
 		}
 	}
