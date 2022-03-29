@@ -50,8 +50,8 @@
 		&:before {
 			content: '';
 			position: absolute;
-			bottom: 1%;
-			right: 84.7%;
+			bottom: 6%;
+			right: 84%;
 			background-image: url(../img/services/escrow/chess.png);
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -81,7 +81,7 @@
 			content: '';
 			position: absolute;
 			top: 1%;
-			left: 83.8%;
+			left: 85%;
 			background-image: url(../img/services/trustee/chess.png);
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -94,7 +94,7 @@
 			content: '';
 			position: absolute;
 			top: 10%;
-			left: 83.8%;
+			left: 85%;
 			background-image: url(../img/services/quality-control/texture-3.png);
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -107,7 +107,7 @@
 			content: '';
 			position: absolute;
 			top: 2%;
-			left: 83.8%;
+			left: 85%;
 			background-image: url(../img/services/quality-control/texture-4.png);
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -120,7 +120,7 @@
 			content: '';
 			position: absolute;
 			top: 10%;
-			left: 83.8%;
+			left: 85%;
 			background-image: url(../img/services/quality-assurance/chess.png);
 			background-repeat: no-repeat;
 			background-size: contain;
@@ -128,6 +128,19 @@
 			max-width: 332px;
 			height: 34vmin;
 			max-height: 330px;
+		}
+		&--5:before {
+			content: '';
+			position: absolute;
+			top: 7%;
+			left: 85%;
+			background-image: url(../img/services/verification-of-conformity/chess.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 34vmin;
+			max-width: 330px;
+			height: 46vmin;
+			max-height: 440px;
 		}
 	}
 	@media (max-width: 1366px){
