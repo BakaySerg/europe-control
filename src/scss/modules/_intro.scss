@@ -19,6 +19,11 @@
 			background-size: auto 100%;
 		}
 	}
+	&--bg-sm-75 {
+		@media (max-width: 767px){
+			background-position: 75% center;
+		}
+	}
 	&:before {
 		content: '';
 		position: absolute;
