@@ -93,6 +93,18 @@ ul {
 		font-size: em(20);
 	}
 }
+.h4 {
+	font-weight: 800;
+	font-size: em(22);
+	padding-bottom: .8em;
+	line-height: 1.44;
+	@media (max-width: 1024px){
+		font-size: em(20);
+	}
+	@media (max-width: 767px){
+		font-size: em(18);
+	}
+}
 .h5 {
 	font-weight: 800;
 	font-size: 1em;
@@ -135,6 +147,9 @@ ul {
 	&--sm {
 		max-width: 230px;
 	}
+	&--l {
+		max-width: 360px;
+	}
 	&--md {
 		max-width: 520px;
 	}
@@ -148,7 +163,7 @@ ul {
 			position: absolute;
 			width: 6.6em;
 			height: 6.6em;
-			left: 12em;
+			right: -5em;
 			top: -3em;
 			background-image: url(../img/general/dots-light.svg);
 			background-repeat: no-repeat;
@@ -157,12 +172,11 @@ ul {
 				top: -2.8em;
 			}
 			@media (max-width: 991px){
-				left: 11em;
-				top: -2em;
+				right: -5em;
+				top: -2.5em;
 			}
 			@media (max-width: 600px){
 				top: -1.3em;
-				left: 8em;
 				width: 4em;
 				height: 4em;
 			}
