@@ -121,6 +121,10 @@ ul {
 .accent {
 	color: $yellow;
 }
+.link {
+	color: $blue;
+	font-weight: bold;
+}
 .icon-text {
 	display: flex !important;
 	font-style: normal;
@@ -163,6 +167,9 @@ ul {
 	}
 	&--lg {
 		max-width: 758px;
+	}
+	&--xl {
+		max-width: 1020px;
 	}
 	&--decor-1 {
 		width: fit-content;
