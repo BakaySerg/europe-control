@@ -1,0 +1,49 @@
+.step {
+	&__row {
+		position: relative;
+		z-index: 1;
+		@media (min-width: 768px){
+			display: grid;
+			gap: 1.1em;
+			grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+		}
+		@media (min-width: 1200px){
+			&--5 {
+				grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+			}
+			&::before {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				border-top: 1px solid $border-light;
+				top: 1.4em;
+				left: 2em;
+				width: 80%;
+				opacity: .5;
+			}
+		}
+	}
+	&__item {
+		p {
+			font-size: em(17);
+			opacity: 0.9;
+		}
+		@media (max-width: 767px){
+			padding-bottom: .8em;
+		}
+	}
+	&__icon {
+		width: 2.9em;
+		height: 2.9em;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: inherit;
+		background-color: $yellow;
+		border-radius: 50%;
+		margin-bottom: 1em;
+		.icon	 {
+			color: $text;
+		}
+	}
+}

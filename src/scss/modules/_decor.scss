@@ -92,6 +92,15 @@
 			bottom: 25%;
 			right: 85%
 		}
+		&--02:before{
+			background-image: url(../img/services/company-search/chess.png);
+			width: 32vmin;
+			max-width: 222px;
+			height: 34vmin;
+			max-height: 330px;
+			bottom: 15%;
+			right: 85%
+		}
 		&--1:before {
 			content: '';
 			position: absolute;

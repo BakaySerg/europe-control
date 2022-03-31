@@ -57,6 +57,7 @@ ul {
 	font-size: em(60);
 	line-height: 1.16;
 	padding-bottom: .6em;
+	text-shadow: 0 1px 26px rgba(17, 17, 17,.3);
 	@media (max-width: 1100px){
 		font-size: em(52);
 	}
@@ -178,7 +179,7 @@ ul {
 			position: absolute;
 			width: 6.6em;
 			height: 6.6em;
-			right: -5em;
+			right: -3em;
 			top: -3em;
 			background-image: url(../img/general/dots-light.svg);
 			background-repeat: no-repeat;

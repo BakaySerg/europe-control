@@ -43,6 +43,10 @@
 			background-position: 60% -5%;
 			background-size: 94% auto;
 		}
+		&--3 {
+			background-image: url(../img/services/escrow/dots.png);
+			background-position: center right;
+		}
 	}
 	@media (max-width: 1200px){
 		background-size: contain;
@@ -482,6 +486,9 @@
 			margin-bottom: 0.9em;
 		}
 	}
+	@media (min-width: 1500px){
+		gap: 4.8em;
+	}
 }
 .flex-center {
 	list-style: none;
@@ -601,6 +608,11 @@
 	& > div {
 		@media (min-width: 992px){
 			max-width: 540px;
+		}
+	}
+	&--lg > div {
+		@media (min-width: 992px) {
+			max-width: 640px;
 		}
 	}
 }
