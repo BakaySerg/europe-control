@@ -226,6 +226,9 @@ ul {
 			}
 		}
 	}
+	@media (max-width: 767px){
+		margin-left: 2px;
+	}
 	li {
 		break-inside: avoid;
 		padding-right: .4em;

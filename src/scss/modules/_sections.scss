@@ -487,7 +487,7 @@
 		}
 	}
 	@media (min-width: 1500px){
-		gap: 4.8em;
+		gap: 4.6em;
 	}
 }
 .flex-center {
@@ -524,7 +524,7 @@
 		}
 		@media (min-width: 1200px){
 			&--4 {
-				grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+				grid-template-columns: repeat(auto-fill,minmax(296px,1fr));
 			}
 		}
 		@media (min-width: 1900px){

@@ -101,6 +101,12 @@
 	align-items: center;
 	justify-content: center;
 }
+.align-right {
+	@media (min-width: 768px){
+		margin-left: auto;
+		width: fit-content;
+	}
+}
 .font-bold {
 	font-weight: bold;
 }
