@@ -292,7 +292,8 @@
 	margin-left: auto;
 	flex-grow: 1;
 	&--xs {
-		max-width: 700px;
+		max-width: 690px;
+		margin-left: 0;
 	}
 	&--l {
 		max-width: 820px;

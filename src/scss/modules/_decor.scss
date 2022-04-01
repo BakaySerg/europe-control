@@ -166,6 +166,19 @@
 			height: 46vmin;
 			max-height: 440px;
 		}
+		&--6:before {
+			content: '';
+			position: absolute;
+			top: 10%;
+			left: 85.2%;
+			background-image: url(../img/services/certification/chess.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 34vmin;
+			max-width: 332px;
+			height: 34vmin;
+			max-height: 220px;
+		}
 	}
 	@media (max-width: 1366px){
 		&:before {
