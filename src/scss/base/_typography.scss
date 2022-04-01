@@ -99,7 +99,7 @@ ul {
 	}
 	@media (max-width: 600px){
 		line-height: 1.5;
-		font-size: em(20);
+		font-size: em(19);
 	}
 }
 .h4 {
@@ -158,10 +158,17 @@ ul {
 		}
 	}
 	&--sm {
-		max-width: 230px;
+		@media (min-width: 768px){
+			max-width: 420px;
+		}
+		@media (min-width: 1101px){
+			max-width: 230px;
+		}
 	}
 	&--l {
-		max-width: 360px;
+		@media (min-width: 1101px){
+			max-width: 360px;
+		}
 	}
 	&--md {
 		max-width: 520px;

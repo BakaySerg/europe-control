@@ -74,6 +74,11 @@
 		padding-top: 15px;
 	}
 }
+.pb-sm-15 {
+	@media (max-width: 767px){
+		padding-bottom: 1.6em !important;
+	}
+}
 [hidden] {
 	display: none!important;
 }

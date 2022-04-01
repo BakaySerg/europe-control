@@ -11,11 +11,10 @@
 	}
 	@media (max-width: 600px){
 		padding-top: 3em;
-		padding-bottom: 2.8em;
+		padding-bottom: 2.2em;
 	}
 	@media (max-width: 400px){
 		padding-top: 2.6em;
-		padding-bottom: 2.2em;
 	}
 }
 .s--map {
@@ -221,6 +220,12 @@
 		}
 	}
 	&__item {
+		&--line {
+			display: flex;
+			align-items: center;
+			gap: 1em;
+			padding-bottom: 1em;
+		}
 		.h3 {
 			padding-top: .6em;
 			padding-bottom: .9em;
@@ -229,7 +234,7 @@
 				padding-bottom: .8em;
 			}
 		}
-		p {
+		p, ul {
 			font-size: em(17);
 		}
 		.list {
@@ -488,7 +493,7 @@
 		}
 	}
 	@media (min-width: 1500px){
-		gap: 4.6em;
+		gap: 4.3em;
 	}
 }
 .flex-center {
@@ -558,7 +563,7 @@
 		border-radius: 50%;
 		position: relative;
 		top: -.5em;
-		.icon {color: $text;}
+		.icon {color: $blue;}
 		&--blue {
 			background-color: $blue;
 			.icon {color: $white;}
