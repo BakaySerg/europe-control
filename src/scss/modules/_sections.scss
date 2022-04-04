@@ -529,7 +529,7 @@
 			padding-top: 2.6em;
 			display: grid;
 			grid-template-columns: repeat(auto-fill,minmax(408px,1fr));
-			grid-gap: 28px 26px;
+			grid-gap: 28px 25px;
 		}
 		@media (min-width: 1200px){
 			&--4 {
@@ -542,7 +542,10 @@
 	}
 	&__item	{
 		display: flex;
-		gap: 1em;
+		gap: .7em;
+		&--txt {
+			display: block;
+		}
 		p {
 			opacity: 0.86;
 			font-size: em(17);
@@ -553,6 +556,13 @@
 				padding-bottom: 0.4em;
 			}
 		}
+	}
+	&__title {
+		display: flex;
+		gap: .7em;
+
+		padding-bottom: 0.5em;
+		.h5 {padding-bottom: 0;}
 	}
 	&__icon {
 		flex-shrink: 0;

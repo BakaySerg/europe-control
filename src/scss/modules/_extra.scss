@@ -47,3 +47,28 @@
 		}
 	}
 }
+.phase {
+	&__title {
+		padding-top: 1.6em;
+		padding-bottom: 1em;
+		display: flex;
+		align-items: center;
+		gap: .5em;
+		color: $blue;
+		&::before {
+			content: attr(data-phase-number);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-shrink: 0;
+			border-radius: 50%;
+			background-color: $blue;
+			color: $white;
+			width: 2.2em;
+			height: 2.2em;
+			font-family: $default-font;
+			font-size: 0.9em;
+			font-weight: 800;
+		}
+	}
+}
