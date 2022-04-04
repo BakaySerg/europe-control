@@ -125,6 +125,9 @@
 	.tab__pict {
 		min-width: auto;
 	}
+	@media (max-width: 1023px){
+		display: block;
+	}
 }
 .tab__controls {
 	display: flex;
@@ -134,6 +137,19 @@
 	flex-grow: 1;
 	@media (max-width: 600px){
 		gap: 2.6em;
+	}
+	&--col {
+		@media (min-width: 1024px){
+			flex-direction: column;
+			flex: 0 0 120px;
+			gap: 3em;
+			padding-right: 1em;
+			margin-right: auto;
+			margin-left: 2vw;
+		}
+		@media (max-width: 1023px){
+			padding-bottom: 2.5em;
+		}
 	}
 }
 .tab__btn {
@@ -154,6 +170,10 @@
 	user-select: none;
 	cursor: pointer;
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	@media (max-width: 1100px){
+		width: 2.8em;
+		height: 2.8em;
+	}
 	@media (max-width: 991px){
 		width: 2.2em;
 		height: 2.2em;

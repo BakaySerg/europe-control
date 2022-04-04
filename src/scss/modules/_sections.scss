@@ -309,6 +309,9 @@
 	&--md {
 		max-width: 990px;
 	}
+	&--mmd {
+		max-width: 956px;
+	}
 	&--lg {
 		max-width: 1123px;
 	}
@@ -619,6 +622,7 @@
 	&--lg > div {
 		@media (min-width: 992px) {
 			max-width: 640px;
+			flex: 1 1 50%;
 		}
 	}
 }
