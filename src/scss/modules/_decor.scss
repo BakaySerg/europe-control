@@ -33,6 +33,11 @@
 			top: auto;
 			bottom: 1%;
 		}
+		&--6::before {
+			top: -12%;
+			right: auto;
+			left: 18%;
+		}
 	}
 	@media (max-width: 1366px){
 		&:before {
