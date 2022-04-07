@@ -246,6 +246,11 @@ ul {
 		}
 	}
 }
+.s--yellow {
+	.columns-list {
+		::marker {color: $blue;}
+	}
+}
 .columns-text {
 	@media (min-width: 600px){
 		columns: 2;
