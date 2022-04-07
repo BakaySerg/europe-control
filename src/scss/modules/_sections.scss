@@ -563,8 +563,11 @@
 	&__title {
 		display: flex;
 		gap: .7em;
-
-		padding-bottom: 0.5em;
+		padding-bottom: .7em;
+		.h3 {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
 		.h5 {padding-bottom: 0;}
 	}
 	&__icon {
