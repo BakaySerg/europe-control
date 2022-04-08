@@ -4,7 +4,7 @@
 			content: "";
 			position: absolute;
 			width: 9em;
-			height: 9em;
+			height: 8em;
 			background-image: url(../img/general/dots-light-4.svg);
 			background-repeat: no-repeat;
 			top: 27%;
@@ -20,7 +20,7 @@
 			top: auto;
 			right: auto;
 			left: 18%;
-			bottom: 0;
+			bottom: -3%;
 		}
 		&--22 {
 			&:before {
@@ -71,19 +71,17 @@
 	}
 }
 .decor-lines {
-	@media (min-width: 768px){
-		position: relative;
-		z-index: 1;
-		&::before {
-			content: '';
-			position: absolute;
-			left: -4%;
-			bottom: -4%;
-			width: 108%;
-			height: 104%;
-			background-image: url(../img/general/texture.png);
-			background-position: center;
-		}
+	position: relative;
+	z-index: 1;
+	&::before {
+		content: '';
+		position: absolute;
+		left: -4%;
+		bottom: -4%;
+		width: 108%;
+		height: 104%;
+		background-image: url(../img/general/texture.png);
+		background-position: center;
 	}
 	@media (max-width: 1100px){
 		&::before {

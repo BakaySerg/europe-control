@@ -27,7 +27,7 @@
 <symbol id="i-attention" viewBox="0 0 32 32">
 <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.3333" d="M18.705 5.519l10.212 17.873c1.187 2.077-0.313 4.663-2.705 4.663h-20.424c-2.393 0-3.893-2.585-2.705-4.663l10.212-17.873c1.196-2.095 4.215-2.095 5.411 0v0z"></path>
 <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.3333" d="M16.222 17.773v-4.44"></path>
-<path d="M17.601 22c0 0.736-0.597 1.333-1.333 1.333s-1.333-0.597-1.333-1.333c0-0.736 0.597-1.333 1.333-1.333s1.333 0.597 1.333 1.333z"></path>
+<path fill="currentColor" d="M17.601 22c0 0.736-0.597 1.333-1.333 1.333s-1.333-0.597-1.333-1.333c0-0.736 0.597-1.333 1.333-1.333s1.333 0.597 1.333 1.333z"></path>
 </symbol>
 <symbol id="i-chart" viewBox="0 0 32 32">
 <path fill="none" stroke="currentColor" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.3333" d="M6.667 4h18.667c1.473 0 2.667 1.193 2.667 2.667v18.667c0 1.473-1.193 2.667-2.667 2.667h-18.667c-1.473 0-2.667-1.193-2.667-2.667v-18.667c0-1.473 1.193-2.667 2.667-2.667z"></path>

@@ -77,3 +77,118 @@
 		}
 	}
 }
+.scheme {
+	@media (min-width: 1024px){
+		&:before,&:after {
+			content: '';
+			position: absolute;
+			width: 7em;
+			height: 2em;
+			background-image: url(../img/general/dots-light-0.svg);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		&:before {
+			top: -3em;
+			right: 8em;
+		}
+		&:after {
+			bottom: -3em;
+			left: 26%;
+		}
+	}
+	&__row {
+		position: relative;
+		padding-top: 0.6em;
+		@media (min-width: 1000px){
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			gap: 1.6em;
+			padding-top: 2.8em;
+			padding-bottom: 1em;
+		}
+		@media (max-width: 999px){
+			padding-left: 1.5em;
+		}
+		&:before {
+			content: '';
+			width: 84%;
+			position: absolute;
+			border: 1px solid $border-light;
+			border-bottom: none;
+			height: 3.4em;
+			top: -1.2em;
+			@media (max-width: 999px){
+				border-right: none;
+				width: 50%;
+				height: calc(100% - .59em);
+				left: 0;
+			}
+		}
+	}
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: .7em;
+		padding: 0 1.3em;
+		width: fit-content;
+		margin: 0 auto;
+		background-color: $blue;
+		position: relative;
+		z-index: 1;
+	}
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: .7em;
+		border: 1px solid $border-light;
+		padding: 1.3em 1em;
+		flex-grow: 0.16;
+		position: relative;
+		@media (max-width: 999px){
+			padding: 0.8em 1.6em;
+			justify-content: flex-start;
+			&:not(:last-child) {
+				margin-bottom: .8em;
+			}
+		}
+		&::before {
+			content: '';
+			border-radius: 50%;
+			width: 20px;
+			height: 20px;
+			background-color: currentColor;
+			border: 7px solid $yellow;
+			flex-shrink: 0;
+			@media (max-width: 600px) {
+				width: 16px;
+				height: 16px;
+				border-width: 5px;
+			}
+		}
+		@media (min-width: 1000px) {
+			&:not(:first-child):not(:last-child) {
+				&:after {
+					content: '';
+					position: absolute;
+					top: -4em;
+					height: 3.3em;
+					border-right: 1px solid $border-light;
+					left: 49%;
+				}
+			}
+		}
+		@media (max-width: 999px){
+			&:after {
+				content: '';
+				position: absolute;
+				border-bottom: 1px solid $border-light;
+				right: calc(100% + .5em);
+				width: 1em;
+			}
+		}
+	}
+}

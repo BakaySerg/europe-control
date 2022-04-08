@@ -505,6 +505,11 @@
 		gap: 4.3em;
 	}
 }
+.flex-v-end {
+	@media (min-width: 1280px) {
+		align-items: flex-end;
+	}
+}
 .flex-center {
 	list-style: none;
 	@media (min-width: 768px){
