@@ -521,6 +521,9 @@
 }
 .lim {
 	max-width: 950px;
+	&--sm	{
+		max-width: 720px;
+	}
 	&--md {
 		max-width: 1020px;
 	}
@@ -646,7 +649,7 @@
 	&--lg > div {
 		@media (min-width: 992px) {
 			max-width: 640px;
-			flex: 1 1 50%;
+			flex: 1 .2 50%;
 		}
 	}
 }

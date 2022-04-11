@@ -86,6 +86,12 @@
 				max-width: 860px;
 			}
 		}
+		&--xl {
+			max-width: 980px;
+			@media (max-width: 1200px){
+				max-width: 900px;
+			}
+		}
 		@media (min-width: 1600px){
 			margin-top: 6.4em;
 		}
