@@ -466,7 +466,7 @@
 			border-radius: 50%;
 			width: 20px;
 			height: 20px;
-			background-color: currentColor;
+			background-color: $white;
 			border: 7px solid $yellow;
 			flex-shrink: 0;
 			@media (max-width: 600px){
@@ -481,6 +481,38 @@
 				align-self: flex-start;
 				margin-top: .3em;
 			}
+		}
+	}
+	&__subtitle {
+		margin-top: -.7em;
+		margin-bottom: .9em;
+		padding-left: 2.3em;
+		opacity: .7;
+		font-size: .88em;
+		@media (max-width: 600px){
+			padding-left: 1.8em;
+		}
+	}
+	&__brand {
+		max-width: 170px;
+		max-height: 170px;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			bottom: 1.2em;
+			left: 0;
+			border-bottom: 1px solid $border;
+			width: 130%;
+			max-width: 216px;
+		}
+		@media (max-width: 1100px){
+			max-width: 140px;
+			max-height: 140px;
+		}
+		@media (max-width: 700px){
+			max-width: 100px;
+			max-height: 100px;
 		}
 	}
 }

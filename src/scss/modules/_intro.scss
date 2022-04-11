@@ -1,15 +1,27 @@
 .intro {
 	position: relative;
+	background-image: var(--bg1x);
+	background-position: center;
+	background-size: cover;
+	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi),(min-width: 2000px) {
+		background-image: var(--bg2x);
+	}
+	&--sm	{
+		max-height: 560px;
+		@media (min-width: 1024px) {
+			min-height: 40vh;
+		}
+		@media (min-width: 1200px) {
+			min-height: 57.3vh;
+		}
+		@media (min-width: 2000px){
+			min-height: 29.4vh;
+		}
+	}
 	&--lg {
+		max-height: 830px;
 		@media (min-width: 1024px){
 			min-height: 85vh;
-		}
-		max-height: 830px;
-		background-image: var(--bg1x);
-		background-position: center;
-		background-size: cover;
-		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi),(min-width: 2000px) {
-			background-image: var(--bg2x);
 		}
 		@media (min-width: 2000px){
 			min-height: 850px;
@@ -125,5 +137,18 @@
 	}
 	@media (min-width: 2000px){
 		min-height: 36vh;
+	}
+}
+.intro--sm {
+	.s-intro {
+		@media (min-width: 1200px) {
+			min-height: 60vh;
+		}
+		@media (min-width: 2000px) {
+			min-height: 30vh;
+		}
+		@media (max-width: 767px){
+			padding-bottom: 1em;
+		}
 	}
 }

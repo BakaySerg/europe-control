@@ -226,6 +226,16 @@
 			bottom: 18%;
 			right: 7%;
 		}
+		&--8:before{
+			background-image: url(../img/services/inspection/chess.png);
+			width: 34vmin;
+			max-width: 330px;
+			height: 34vmin;
+			max-height: 330px;
+			bottom: -1%;
+			right: -12%;
+			transform: scaleY(-1);
+		}
 	}
 	@media (max-width: 1366px){
 		&:before {
