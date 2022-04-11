@@ -29,7 +29,7 @@
 				background-repeat: no-repeat;
 				background-position: center;
 				margin-left: auto;
-				transition: .4s;
+				transition: .2s;
 			}
 			&:hover {
 				@media (min-width: 1200px){
@@ -57,7 +57,7 @@
 		&.expanded {
 			.accordion__trigger {
 				&:after {
-					transform: rotate(-270deg);
+					transform: rotate(-90deg);
 					background-color: $yellow;
 				}
 			}
