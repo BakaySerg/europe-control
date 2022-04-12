@@ -192,3 +192,55 @@
 		}
 	}
 }
+.title-combo {
+	display: flex;
+	gap: 3em;
+	flex-grow: 1;
+	flex-shrink: .4;
+	.h2 {
+		align-self: flex-start;
+		padding-right: .6em;
+		padding-bottom: .3em;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			border-bottom: 2px solid $yellow;
+		}
+	}
+	@media (min-width: 1200px) {
+		max-width: 466px;
+		min-width: 460px;
+	}
+}
+
+.title__icon {
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	z-index: 1;
+	width: 5.3em;
+	height: 5.3em;
+	color: $blue;
+	background-color: $yellow;
+	border-radius: 50%;
+	.icon {
+		color: currentColor;
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		top: -24%;
+		left: -24%;
+		width: 148%;
+		height: 148%;
+		background-image: url(../img/industries/circle.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}
