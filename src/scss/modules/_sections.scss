@@ -102,6 +102,10 @@
 		ul {
 			::marker {color: $yellow;}
 		}
+		ul,p {
+			color: rgba($white, .86);
+			b {color: $white;}
+		}
 	}
 	&--yellow {
 		background-color: $yellow;
@@ -517,7 +521,7 @@
 	}
 }
 .flex-md {
-	@media (min-width: 1024px) {
+	@media (min-width: 1200px) {
 		display: flex;
 		gap: 2.8em;
 	}
