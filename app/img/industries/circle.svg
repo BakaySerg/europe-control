@@ -1,0 +1,31 @@
+<svg width="148" height="148" viewBox="0 0 148 148" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_204_5283" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="148" height="148">
+<circle cx="74" cy="74" r="69" stroke="#FFDB00" stroke-width="10"/>
+</mask>
+<g mask="url(#mask0_204_5283)">
+<path d="M74 148.001V0.925781" stroke="#FFDB00"/>
+<path d="M0 74H147.075" stroke="#FFDB00"/>
+<path d="M110.707 137.918L37.1699 10.5469" stroke="#FFDB00"/>
+<path d="M9.61914 110.832L136.99 37.2945" stroke="#FFDB00"/>
+<path d="M137.539 110.684L10.168 37.1465" stroke="#FFDB00"/>
+<path d="M36.4512 137.77L109.989 10.3989" stroke="#FFDB00"/>
+<path d="M125.894 125.92L21.8965 21.9219" stroke="#FFDB00"/>
+<path d="M21.2461 125.92L125.244 21.9222" stroke="#FFDB00"/>
+<path d="M92.8861 145.118L54.8203 3.05469" stroke="#FFDB00"/>
+<path d="M2.25488 92.791L144.318 54.7252" stroke="#FFDB00"/>
+<path d="M82.688 147.168L65.0068 1.16016" stroke="#FFDB00"/>
+<path d="M0.329102 82.6016L146.337 64.9204" stroke="#FFDB00"/>
+<path d="M64.5995 147.245L83.0703 1.33398" stroke="#FFDB00"/>
+<path d="M0.476562 64.5371L146.387 83.0079" stroke="#FFDB00"/>
+<path d="M46.2078 142.549L101.429 6.23438" stroke="#FFDB00"/>
+<path d="M5.40527 46.1797L141.72 101.401" stroke="#FFDB00"/>
+<path d="M29.1045 132.852L118.509 16.0703" stroke="#FFDB00"/>
+<path d="M15.335 29.1094L132.116 118.514" stroke="#FFDB00"/>
+<path d="M15.4447 119.223L132.166 29.7402" stroke="#FFDB00"/>
+<path d="M29.1523 15.4746L118.635 132.196" stroke="#FFDB00"/>
+<path d="M5.63005 102.442L141.641 46.4766" stroke="#FFDB00"/>
+<path d="M45.9033 5.85352L101.869 141.864" stroke="#FFDB00"/>
+<path d="M54.7457 145.399L92.8115 3.33594" stroke="#FFDB00"/>
+<path d="M2.41699 54.7695L144.481 92.8353" stroke="#FFDB00"/>
+</g>
+</svg>
