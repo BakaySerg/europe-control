@@ -139,6 +139,15 @@
 			bottom: 2%;
 			right: 84.8%
 		}
+		&--04:before{
+			background-image: url(../img/industries/chess.png);
+			width: 23vmin;
+			max-width: 220px;
+			height: 23vmin;
+			max-height: 220px;
+			bottom: -10%;
+			right: 94%
+		}
 		&--1:before {
 			content: '';
 			position: absolute;

@@ -243,4 +243,11 @@
 		background-repeat: no-repeat;
 		background-size: contain;
 	}
+	&--blue {
+		background-color: $blue;
+		color: $white;
+		&::before {
+			background-image: url(../img/industries/circle-2.svg);
+		}
+	}
 }
