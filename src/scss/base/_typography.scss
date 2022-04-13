@@ -126,7 +126,19 @@ ul {
 }
 .link {
 	color: $blue;
-	font-weight: bold;
+	font-weight: 600;
+	&--arrow {
+		display: flex;
+		align-items: center;
+		gap: .4em;
+		text-decoration: underline;
+		text-decoration-color: rgba($blue,.2);
+		.icon {
+			color: inherit;
+			max-width: 20px;
+			max-height: 20px;
+		}
+	}
 }
 .icon-text {
 	display: flex !important;

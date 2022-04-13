@@ -41,7 +41,6 @@ body {
 			transform: translateX(-50%);
 			width: 882px;
 			max-width: 80%;
-			// background-image: repeating-linear-gradient(to left, transparent, transparent 440px,#e9e9e9 440px, #e9e9e9 441px,transparent 442px);
 			background-image: url(../img/general/lines.svg);
 			background-repeat: repeat-y;
 			background-position: center;
@@ -93,4 +92,4 @@ body {
 @import "modules/grid";
 @import "modules/faq";
 @import "modules/extra";
-
+@import "components/table";

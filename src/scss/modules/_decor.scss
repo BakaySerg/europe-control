@@ -245,6 +245,15 @@
 			right: -12%;
 			transform: scaleY(-1);
 		}
+		&--9:before{
+			background-image: url(../img/pricing/texture.png);
+			width: 52vmin;
+			max-width: 550px;
+			height: 34vmin;
+			max-height: 330px;
+			bottom: -86%;
+			right: -16%;
+		}
 	}
 	@media (max-width: 1366px){
 		&:before {
