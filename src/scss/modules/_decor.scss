@@ -254,6 +254,15 @@
 			bottom: -86%;
 			right: -16%;
 		}
+		&--10:before{
+			background-image: url(../img/how-it-works/chess.png);
+			width: 46vmin;
+			max-width: 440px;
+			height: 46vmin;
+			max-height: 440px;
+			bottom: 3%;
+			right: -20%;
+		}
 	}
 	@media (max-width: 1366px){
 		&:before {

@@ -3,7 +3,7 @@
 	background-image: var(--bg1x);
 	background-position: center;
 	background-size: cover;
-	@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi),(min-width: 2000px) {
+	@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px), (min-resolution: 192dpi) and (min-width: 1024px),(min-width: 2000px) {
 		background-image: var(--bg2x);
 	}
 	&--sm	{
