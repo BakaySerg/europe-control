@@ -263,6 +263,15 @@
 			bottom: 3%;
 			right: -20%;
 		}
+		&--11:before {
+			background-image: url(../img/how-it-works/chess-2.png);
+			width: 28vmin;
+			max-width: 220px;
+			height: 28vmin;
+			max-height: 220px;
+			top: -3%;
+			right: -10%;
+		}
 	}
 	@media (max-width: 1366px){
 		&:before {
@@ -309,10 +318,36 @@
 				left: 37%;
 			}
 		}
+		&--2 {
+			&:after {
+				background-image: url(../img/general/bg-text-4.png);
+				left: 37%;
+			}
+		}
 	}
 	@media (max-width: 1100px){
 		&:after {
 			background-size: contain;
+		}
+	}
+}
+.decor-texture {
+	@media (min-width: 1400px){
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 90%;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+		&--1::before {
+			width: 61vmin;
+			height: 50vmin;
+			max-width: 600px;
+			max-height: 480px;
+			background-image: url(../img/how-it-works/texture.png);
+			top: -26%;
 		}
 	}
 }

@@ -32,13 +32,14 @@
 		display: block;
 		font-size: em(16);
 		font-family: inherit;
-		padding: .2em 1.2em;
+		padding: .2em .8em;
 		border: none;
-		height: 60px;
+		border-bottom: 2px solid rgba($text,.4);
+		height: 54px;
 		outline: none;
 		// background-color: $bg-muted;
 		margin-bottom: 1.68em;
-		caret-color: $accent;
+		caret-color: $blue;
 		// &:focus {
 		// 	background-color: lighten($bg-muted, 3%);
 		// }
@@ -54,14 +55,16 @@
 		display: block;
 		font-size: em(16);
 		font-family: inherit;
-		padding: 1em 1.2em .4em;
+		padding: 1em .8em .4em;
 		border: none;
+		border-bottom: 2px solid rgba($text,.4);
 		// background-color: $bg-muted;
-		height: 128px;
-		resize: none;
+		height: 90px;
+		min-height: 70px;
+		resize: vertical;
 		outline: none;
 		margin-bottom: 1.68em;
-		caret-color: $accent;
+		caret-color: $blue;
 		// &:focus {
 		// 	background-color: lighten($bg-muted, 3%);
 		// }

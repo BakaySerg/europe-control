@@ -145,6 +145,33 @@
 		});
 	};
 
+	const testimonBrand = document.querySelector(".testimon__slider");
+		if (testimonBrand) {
+			new Swiper(testimonBrand, {
+			draggable:true,
+			grabCursor: true,
+			pagination: {
+				el: ".swiper-pagination",
+				type: "bullets",
+				// dynamicBullets: true,
+				clickable: true,
+			},
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+				},
+				720: {
+					slidesPerView: 2,
+					centeredSlides:false,
+				},
+				1300: {
+					slidesPerView: 3,
+					spaceBetween: 20,
+				}
+			}
+		});
+	};
+
 	/**
 		accordions
 	**/
