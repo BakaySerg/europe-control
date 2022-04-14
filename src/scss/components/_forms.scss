@@ -48,6 +48,8 @@
 		}
 		@media (max-width: 767px){
 			margin-bottom: 1em;
+			border-bottom-width: 1px;
+			padding-left: 0.4em;
 		}
 	}
 	textarea {
@@ -70,6 +72,8 @@
 		// }
 		@media (max-width: 767px){
 			margin-bottom: 1em;
+			border-bottom-width: 1px;
+			padding-left: 0.4em;
 		}
 	}
 	&__cta {

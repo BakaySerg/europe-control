@@ -148,6 +148,15 @@
 			bottom: -7%;
 			right: 94%
 		}
+		&--05:before{
+			background-image: url(../img/about/chess.png);
+			width: 34vmin;
+			max-width: 330px;
+			height: 46vmin;
+			max-height: 440px;
+			top: 27%;
+			right: 86%
+		}
 		&--1:before {
 			content: '';
 			position: absolute;
