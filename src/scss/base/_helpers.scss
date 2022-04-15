@@ -6,6 +6,12 @@
 .mb-1 {
 	margin-bottom: 1em;
 }
+.mb-2{
+	margin-bottom: 2em;
+	@media (max-width: 500px) {
+		margin-bottom: 1.5em;
+	}
+}
 .mt-1 {
 	margin-top: 1em;
 }
