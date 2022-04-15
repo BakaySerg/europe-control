@@ -328,3 +328,17 @@
 		}
 	}
 }
+.cont__link {
+	display: block;
+	color: inherit;
+	padding-bottom: .1em;
+	&:hover {
+		color: $blue;
+	}
+}
+#map {
+	width: 100%;
+	max-width: 100%;
+	height: 55vmin;
+	max-height: 590px;
+}
