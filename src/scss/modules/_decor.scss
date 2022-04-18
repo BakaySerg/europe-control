@@ -349,14 +349,19 @@
 			left: 90%;
 			background-repeat: no-repeat;
 			background-size: contain;
-		}
-		&--1::before {
 			width: 61vmin;
 			height: 50vmin;
 			max-width: 600px;
 			max-height: 480px;
+			opacity: .6;
+		}
+		&--1::before {
 			background-image: url(../img/how-it-works/texture.png);
 			top: -26%;
+		}
+		&--2::before {
+			background-image: url(../img/verify-documents/texture.png);
+			top: 1%;
 		}
 	}
 }

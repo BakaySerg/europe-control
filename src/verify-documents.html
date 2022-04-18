@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>EuropeControl | Verify Documents</title>
+	@@include('./include/head.html')
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include('./include/icon-sprite.html')
+		<div class="intro intro--sm" style="--bg1x: url(../img/verify-documents/intro.jpg); --bg2x:url(../img/verify-documents/intro-2x.jpg);">
+			@@include('./include/header.html')
+			<!-- s-intro -->
+			<section class="s-intro">
+				<div class="container intro__row">
+					<div class="intro__text intro__text--lg">
+						<h1 class="h1">Verify Documents</h1>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- chess -->
+		<section class="s--simply">
+			<div class="container container--sm flex-lg decor-chess decor-chess--6">
+				<div class="title title--sm">
+					<h2 class="strong">Verify Europe Control Documents</h2>
+				</div>
+				<div class="shifted shifted--xs pt-05">
+					<p class="font-bold">Verify Europe Control branded documents to confirm their authenticity and validity.</p>
+					<p>We provide customers with a variety of certificates and reports to confirm the results of inspections or tests we have completed. We also provide a free document verification service, for EUROPE CONTROL branded documents, which will provide clear confirmation as to whether a document is genuine or not before you rely on it for any purpose.</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- s-article -->
+		<section class="s--dots s--dots--3 s--muted-filled pt-sm-1">
+			<div class="container half__container">
+				<div class="half__row">
+					<div class="half__pict">
+						<img loading="lazy" srcset="img/verify-documents/art-1.jpg, img/verify-documents/art-1-2x.jpg 2x" src="img/verify-documents/art-1.jpg" alt="*">
+					</div>
+					<div>
+						<div class="half__text">
+							<div class="title mb-1">
+								<h2 class="h2">Combating the Counterfeiters</h2>
+							</div>
+							<p>Every year, we check thousands of documents that are often being used to legitimately support business transactions. Although most are genuine, a small number are not. Whenever counterfeit documents are found, we take action to investigate the circumstances more fully and identify the individuals or organizations behind them. <b>We also actively monitor third-party websites and remove adverts that make misleading or false references to Europe Control.</b></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+				<!-- form -->
+		<section class="s--simply s--white">
+			<div class="container container--sm flex-lg">
+				<div class="title title--sm">
+					<h2 class="h2">Verify Form</h2>
+				</div>
+				<div class="shifted shifted--xs pt-05">
+					<form action="#" class="form decor-texture decor-texture--2">
+						<p class="font-bold pb-15">To use our document verification service, please complete the form and attach the document(s) for verification.</p>
+						<div class="form__dual">
+							<input type="text" name="f-name" class="form__input" placeholder="First Name *" minlength="2" required>
+							<input type="text" name="l-name" class="form__input" placeholder="Last Name *" minlength="2" required>
+						</div>
+						<div class="form__dual">
+							<input type="text" name="job" class="form__input" placeholder="Job Title" minlength="2">
+							<input type="text" name="company" class="form__input" placeholder="Company Name*" minlength="2" required>
+						</div>
+						<div class="form__dual">
+							<select class="form__select" name="location">
+								<option value="0">Location</option>
+								<option value="1">Europe</option>
+								<option value="2">USA</option>
+								<option value="2">Asia</option>
+							</select>
+							<input type="email" name="email" class="form__input" placeholder="Your Email *" minlength="2" required>
+						</div>
+						<textarea class="textarea" name="comment" cols="30" rows="10" placeholder="Comments *" required></textarea>
+						<div class="form__cta pt-1">
+							<div class="captcha"><img src="img/contacts/captcha.jpg" alt="captcha"></div>
+							<button type="submit" class="btn btn--icon btn--yellow-filled btn--rounded">
+								Submit
+								<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg>
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+
+
+	</div><!-- /wrapper -->
+	@@include('./include/footer.html')
+	<script src="js/main.js"></script>
+</body>
+</html>
