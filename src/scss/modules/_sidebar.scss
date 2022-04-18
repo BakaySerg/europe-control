@@ -1,0 +1,21 @@
+.sup {
+	&__layout {
+		@media (min-width: 601px){
+			display: flex;
+			gap: 4em;
+			align-items: flex-start;
+		}
+	}
+	&__tab {
+		font-weight: 400;
+		&.active {
+			font-weight: 800;
+			color: $blue;
+			text-decoration-color: $blue;
+		}
+	}
+	&__content {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
