@@ -366,7 +366,7 @@
 						<form action="#" class="search__form">
 							<i class="search__icon"><svg class="icon" viewBox="0 0 32 32"><use xlink:href="#i-search"/></svg></i>
 							<input type="text" class="search__input" name="f-search" placeholder="Search..." minlength="2" required>
-							<button type="submit" class="btn arr__icon arr__icon--blue" aria-label="search">
+							<button type="submit" class="btn btn--arr" aria-label="search">
 								<svg class="icon" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg>
 							</button>
 						</form>
@@ -379,12 +379,14 @@
 		<!-- s-simply -->
 		<section class="s--simply s--white">
 			<div class="container sup__layout">
-				<div class="sup__sidebar tabs">
-					<div class="tab active sup__tab" aria-label="switch tab" data-trigger-tab="t-1">Process</div>
-					<div class="tab sup__tab" aria-label="switch tab" data-trigger-tab="t-2">Shipment</div>
-					<div class="tab sup__tab" aria-label="switch tab" data-trigger-tab="t-3">Payment</div>
-					<div class="tab sup__tab" aria-label="switch tab" data-trigger-tab="t-4">Security</div>
-					<div class="tab sup__tab" aria-label="switch tab" data-trigger-tab="t-5">Returns</div>
+				<div class="sup__sidebar">
+					<div class="tabs">
+						<div class="tab active sup__tab" aria-label="switch tab" data-trigger-tab="t-1">Process</div>
+						<div class="tab sup__tab" aria-label="switch tab" data-trigger-tab="t-2">Shipment</div>
+						<div class="tab sup__tab" aria-label="switch tab" data-trigger-tab="t-3">Payment</div>
+						<div class="tab sup__tab" aria-label="switch tab" data-trigger-tab="t-4">Security</div>
+						<div class="tab sup__tab" aria-label="switch tab" data-trigger-tab="t-5">Returns</div>
+					</div>
 				</div>
 				<div class="sup__content tabs-content">
 					<div id="t-1" data-tab="active">
@@ -541,6 +543,93 @@
 			</div>
 		</section>
 
+		<!-- testimons -->
+		<section class="s--simply s--muted-glass">
+			<div class="container container--sm flex-lg decor-chess decor-chess--11 pb-15">
+				<div class="title title--md">
+					<h2 class="h2">Support Team</h2>
+				</div>
+				<div class="shifted shifted--xs pt-05">
+					<p>Europe Control has a highly skilled and experienced team of managers whose backgrounds span a variety of industries.</p>
+				</div>
+			</div>
+			<div class="container container--sm pt-2">
+				<div class="testimon__slider swiper">
+					<div class="swiper-wrapper">
+						<div class="testimon__item swiper-slide">
+							<div class="testimon__top">
+								<div class="testimon__portrait">
+									<img src="img/support/user-1.jpg" alt="avatar" loading="lazy">
+								</div>
+								<div class="testimon__name">
+									<div class="h3">Edward Barton</div>
+									<div class="overtitle">Europe Control CEO</div>
+								</div>
+							</div>
+							<div class="testimon__text">
+								<ul class="testimon__list">
+									<li><b>Skills:</b> A dedicated team of experienced professionals around the world offers flexible solutions for a wide range of corporate transactions.</li>
+									<li><b>Experience:</b> By empowering trust and smarter decisions, we help build a better world by advancing innovation safety, sustainability and connected security.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="testimon__item swiper-slide">
+							<div class="testimon__top">
+								<div class="testimon__portrait">
+									<img src="img/support/user-2.jpg" alt="avatar" loading="lazy">
+								</div>
+								<div class="testimon__name">
+									<div class="h3">Harold Fox</div>
+									<div class="overtitle">Europe Control CEO</div>
+								</div>
+							</div>
+							<div class="testimon__text">
+								<ul class="testimon__list">
+									<li><b>Skills:</b> We provide a systemic approach to supporting our customers’ Quality Assurance efforts in each of the areas of their operations including R&D, raw materials sourcing.</li>
+									<li><b>Experience:</b> We assist our clients throughout the lifetime of their assets, products and infrastructure.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="testimon__item swiper-slide">
+							<div class="testimon__top">
+								<div class="testimon__portrait">
+									<img src="img/support/user-3.jpg" alt="avatar" loading="lazy">
+								</div>
+								<div class="testimon__name">
+									<div class="h3">Janis Williams</div>
+									<div class="overtitle">Europe Control CEO</div>
+								</div>
+							</div>
+							<div class="testimon__text">
+								<ul class="testimon__list">
+									<li><b>Skills:</b> A dedicated team of experienced professionals around the world offers flexible solutions for a wide range of corporate transactions.</li>
+									<li><b>Experience:</b> By empowering trust and smarter decisions, we help build a better world by advancing innovation safety, sustainability and connected security.</li>
+								</ul>
+							</div>
+						</div>
+						<div class="testimon__item swiper-slide">
+							<div class="testimon__top">
+								<div class="testimon__portrait">
+									<img src="img/support/user-2.jpg" alt="avatar" loading="lazy">
+								</div>
+								<div class="testimon__name">
+									<div class="h3">Donny Dawson</div>
+									<div class="overtitle">Founder Company</div>
+								</div>
+							</div>
+							<div class="testimon__text">
+								<ul class="testimon__list">
+									<li><b>Skills:</b> A dedicated team of experienced professionals around the world offers flexible solutions for a wide range of corporate transactions.</li>
+									<li><b>Experience:</b> By empowering trust and smarter decisions, we help build a better world by advancing innovation safety, sustainability and connected security.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
+
 
 	</div><!-- /wrapper -->
 	<!-- footer -->
@@ -638,6 +727,7 @@
 			<div class="footer__copy unim">Copyright © <span id="year">2022</span> EuropeControl</div>
 		</div>
 	</footer>
+	<script src="js/swiper-bundle.min.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

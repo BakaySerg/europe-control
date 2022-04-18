@@ -29,4 +29,48 @@
 			padding-top: 1.1em;
 		}
 	}
+	&__top {
+		@media (min-width: 360px){
+			display: flex;
+			gap: 1.4em;
+			padding-bottom: .6em;
+		}
+		.h3 {line-height: 1.2;}
+	}
+	&__portrait {
+		@media (max-width: 500px){
+			max-width: 120px;
+		}
+	}
+	&__name {
+		@media (min-width: 360px) {
+			&::before {
+				content: '';
+				display: block;
+				margin-bottom: 0.4em;
+				border-radius: 50%;
+				width: 20px;
+				height: 20px;
+				background-color: $white;
+				border: 7px solid $yellow;
+				flex-shrink: 0;
+				@media (max-width: 600px) {
+					width: 16px;
+					height: 16px;
+					border-width: 5px;
+				}
+			}
+		}
+		@media (max-width: 719px){
+			&::before {
+				margin-bottom: 1em;
+			}
+		}
+		@media (max-width: 359px){
+			padding-top: 1.4em;
+		}
+	}
+	&__list {
+		font-size: .92em;
+	}
 }

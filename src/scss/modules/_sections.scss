@@ -95,6 +95,7 @@
 	}
 	&--white {
 		background-color: $white;
+		overflow: initial;
 	}
 	&--dark {
 		color: $white;
