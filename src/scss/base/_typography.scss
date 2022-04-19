@@ -86,6 +86,29 @@ ul {
 		font-size: em(28);
 	}
 }
+.h2_5 {
+	font-family: $add-font;
+	font-weight: 900;
+	font-size: em(28);
+	line-height: 1.2;
+	position: relative;
+	padding-left: .5em;
+	margin-bottom: .8em;
+	@media (max-width: 991px){
+		font-size: em(26);
+	}
+	&::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: .2em;
+		border-left: 2px solid $yellow;
+		height: 80%;
+	}
+}
+p + .h2_5, ul+.h2_5, ol+.h2_5 {
+	margin-top: 1em;
+}
 .h3 {
 	font-weight: 800;
 	font-size: em(27);
@@ -282,4 +305,8 @@ ul {
 	div,p {
 		break-inside: avoid;
 	}
+}
+.list-title {
+	display: block;
+	margin-bottom: .5em;
 }

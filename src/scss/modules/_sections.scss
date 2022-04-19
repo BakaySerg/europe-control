@@ -113,6 +113,7 @@
 	}
 	&--muted-filled {
 		background-color: $white-muted;
+		overflow: initial;
 	}
 	&--point-light {
 		background-image: url(../img/general/points-light.png);
