@@ -54,7 +54,7 @@
 		</section>
 
 
-				<!-- form -->
+		<!-- form -->
 		<section class="s--simply s--white">
 			<div class="container container--sm flex-lg">
 				<div class="title title--sm">
@@ -81,7 +81,22 @@
 							<input type="email" name="email" class="form__input" placeholder="Your Email *" minlength="2" required>
 						</div>
 						<textarea class="textarea" name="comment" cols="30" rows="10" placeholder="Comments *" required></textarea>
-						<div class="form__cta pt-1">
+						<div class="pb-1">Upload your document (s)for verification:
+							<input type="file" name="file" id="file" data-multiple-caption="{count} files" accept="image/jpeg,image/png,image/jpg">
+							<label class="file__area" for="file">
+								<i class="i-file"><svg viewBox="0 0 32 32"><use xlink:href="#i-link"></use></svg></i>
+								<span data-text="Upload image">Choose File</span>
+							</label>
+						</div>
+						<p class="form__remark">Single documents as pdf files, multiple documents in a single zip file, file maximum file size 10mb. For files exceeding 10mb, complete and submit the form abowe without an attachment, and we will contact you.</p>
+						<div class="form__agree">
+						<label class="checkbox__trigger">
+							<input id="agree" class="checkbox" type="checkbox" name="agree" value="1">
+							<i class="checkbox__switch"></i>
+						</label>
+						<label class="checkbox__descr" for="agree">I agree that Europe Control use my data for the purposes of dealing with my request, in accordance with the Online Privacy Statement.</label>
+						</div>
+						<div class="form__cta pt-15">
 							<div class="captcha"><img src="img/contacts/captcha.jpg" alt="captcha"></div>
 							<button type="submit" class="btn btn--icon btn--yellow-filled btn--rounded">
 								Submit
@@ -97,5 +112,28 @@
 	</div><!-- /wrapper -->
 	@@include('./include/footer.html')
 	<script src="js/main.js"></script>
+	<script>
+	// file upload
+		(function () {
+			const inputs = document.querySelectorAll('[type=file]');
+			if (inputs) {
+				[...inputs].forEach(function (input) {
+					input.addEventListener('change', function (e) {
+						let label = e.target.nextElementSibling,
+							labelVal = label.innerHTML,
+							fileName = '';
+						if (this.files && this.files.length > 1)
+							fileName = (this.getAttribute('data-multiple-caption') || 'no files selected').replace('{count}', this.files.length);
+						else
+							fileName = e.target.value.split('\\').pop();
+						if (fileName)
+							label.querySelector('span').innerHTML = fileName;
+						else
+							label.innerHTML = labelVal;
+					});
+				});
+			}
+		}());
+	</script>
 </body>
 </html>

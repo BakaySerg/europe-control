@@ -12,6 +12,9 @@
 	width: 100%;
 	margin-left: auto;
 	margin-right: auto;
+	@media (max-width: 1100px){
+		max-width: 780px;
+	}
 	.text-center {
 		padding-bottom: 3.5em;
 		padding-top: 0.6em;
@@ -89,7 +92,6 @@
 		padding: 1em .8em .4em;
 		border: none;
 		border-bottom: 2px solid rgba($text,.4);
-		// background-color: $bg-muted;
 		background-color: transparent;
 		height: 90px;
 		min-height: 70px;
@@ -97,9 +99,6 @@
 		outline: none;
 		margin-bottom: 1.68em;
 		caret-color: $blue;
-		// &:focus {
-		// 	background-color: lighten($bg-muted, 3%);
-		// }
 		@media (max-width: 767px){
 			margin-bottom: 1em;
 			border-bottom-width: 1px;
@@ -113,6 +112,10 @@
 			align-items: flex-end;
 			gap: 1.7em;
 		}
+	}
+	&__remark {
+		font-size: em(13);
+		margin-bottom: 15px;
 	}
 }
 .captcha {
@@ -166,4 +169,94 @@
 		padding: 0.1em 1em 0.1em 3em;
 		outline: none;
 	}
+}
+//file
+[type=file] {
+	appearance: none;
+	position: absolute;
+	opacity: 0;
+	height: 0;
+	width: 0;
+}
+
+.file__area {
+	display: inline-flex;
+	align-items: center;
+	padding: .2em .9em;
+	color: $blue;
+	user-select: none;
+	cursor: pointer;
+	min-width: 134px;
+	max-width: 300px;
+	vertical-align: middle;
+	transition: .3s;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, .02);
+	@media (max-width: 600px) {
+		width: 100%;
+		padding: .4em .4em .4em 0;
+	}
+	[class|=i] {
+		display: inline-block;
+		flex-shrink: 0;
+		color: $blue;
+		width: 23px;
+		height: 23px;
+		margin-top: -2px;
+		margin-bottom: -1px;
+		margin-right: 12px;
+		@media (max-width: 500px) {
+			width: 20px;
+			height: 20px;
+		}
+	}
+	span {
+		font-weight: 800;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+}
+//custom checkbox
+.form__agree {
+	display: flex;
+	gap: 1em;
+}
+.checkbox {
+	width: 26px;
+	height: 26px;
+	opacity: 0;
+	position: absolute;
+	transform: scale(0);
+	&__switch{
+		position: absolute;
+		width: 12px;
+		height: 12px;
+		border: 4px solid $yellow;
+		border-radius: 50%;
+		transform: scale(1.4);
+		transform-origin: center;
+		transition: .3s;
+		opacity: 0;
+	}
+	&__trigger{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 26px;
+		height: 26px;
+		position: relative;
+		border: 1px solid $text;
+		flex-shrink: 0;
+		cursor: pointer;
+	}
+	&__descr {
+		font-size: em(14);
+		user-select: none;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, .02);
+		cursor: pointer;
+	}
+}
+.checkbox:checked + .checkbox__switch {
+	opacity: 1;
+	transform: scale(1);
 }
