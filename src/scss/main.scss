@@ -3,93 +3,22 @@
 @import "base/fonts";
 @import "base/helpers";
 @import "base/typography";
-
-body {
-	position: relative;
-	color: $text;
-	font-family: $default-font;
-	font-size: 18px;
-	line-height: 1.77;
-	background: transparent;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	min-height: 100vh;
-	@media (max-width: 1366px) {
-		font-size: 17px;
-	}
-	@media (max-width: 1100px) {
-		font-size: 16px;
-	}
-	@media (max-width: 359px) {
-		font-size: 14px;
-	}
-}
-.wrapper {
-	position: relative;
-	width: 100%;
-	min-height: 50vh;
-	max-width: 2200px;
-	margin-left: auto;
-	margin-right: auto;
-	@media (min-width: 1024px){
-		&:before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: 50%;
-			height: 100%;
-			transform: translateX(-50%);
-			width: 882px;
-			max-width: 80%;
-			background-image: url(../img/general/lines.svg);
-			background-repeat: repeat-y;
-			background-position: center;
-			z-index: -1;
-		}
-	}
-	@media (min-width: 2000px){
-		border-right: 1px solid #e9e9e9;
-		border-left: 1px solid #e9e9e9;
-	}
-	@media (max-width: 1200px){
-		&:before {
-			max-width: 80%;
-			background-size: contain;
-		}
-	}
-}
-.container {
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 15px;
-	padding-right: 15px;
-	width: 100%;
-	max-width: 1310px;
-	&--sm {
-		max-width: 1270px;
-	}
-	@media (max-width: 359px) {
-		padding-left: 14px;
-		padding-right: 14px;
-	}
-}
-
+@import "base/general";
 
 //components
 @import "components/icons";
 @import "components/buttons";
 // layout
 @import "layout/header";
+@import "layout/intro";
+@import "layout/sections";
+@import "layout/grid";
 @import "layout/footer";
 
-@import "modules/swiper";
+@import "components/swiper";
 //modules
-@import "modules/intro";
-@import "modules/sections";
 @import "modules/decor";
-@import "modules/tabs";
-@import "modules/grid";
+@import "components/tabs";
 @import "modules/faq";
 @import "modules/extra";
 @import "components/table";

@@ -18,9 +18,6 @@ $border: rgba(0,0,0,.1);
 $border-light: rgba(255,255,255,.2);
 $transition: .5s cubic-bezier(.2,.6,0,1);
 
-//accents
-// $accent: #70C1A0;
-
 //px -> em
 @use "sass:math";
 $browser-context: 18;
