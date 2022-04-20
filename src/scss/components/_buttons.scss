@@ -133,4 +133,12 @@
 			transform: rotate(90deg);
 		}
 	}
+	&:disabled {
+		cursor: not-allowed;
+		background-color: $muted-filed;
+		border-color: $muted-filed;
+	}
+}
+[data-active=false] {
+	display: none;
 }

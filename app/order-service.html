@@ -372,20 +372,19 @@
 			</section>
 		</div>
 
-
 		<!-- s-simply -->
-		<section class="s--simply s--muted-filled">
+		<section class="s--simply s--muted-filled" id="step-1" data-active="true">
 			<div class="container flex-sm mb-2">
 				<div class="title">
 					<h2 class="h2">Order Service</h2>
 				</div>
 				<div class="steps">
 					<button type="button" class="btn step active">1</button>
-					<button type="button" class="btn step">2</button>
+					<button type="button" class="btn step" data-step="step-2" disabled>2</button>
 				</div>
 			</div>
 			<div class="container">
-				<h3 class="h3 h3--light mb-2">Select the services you want to order:</h3>
+				<h3 class="h3 h3--light mb-1">Select the services you want to order:</h3>
 				<form id="opt-form" class="opt__list">
 					<div class="opt__row">
 						<label class="checkbox__trigger">
@@ -515,8 +514,32 @@
 						<label class="checkbox__descr" for="opt-16">Testing & Audit</label>
 						<div class="opt__sum">€ 100</div>
 					</div>
+					<input type="hidden" name="res" id="hidden-sum" value="0">
+					<input type="hidden" name="res2" id="hidden-selected" value="0">
 				</form>
+				<div class="opt__cta">
+					<div class="h3 h3--light">Total Payment:</div>
+					<b class="opt__total">€ <span id="total">0</span></b>
+					<button type="submit" class="btn btn--icon btn--yellow-filled btn--rounded" data-step="step-2" disabled>
+						Continue
+						<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg>
+					</button>
+				</div>
 			</div>
+		</section>
+
+		<!-- 2 -->
+		<section class="s--simply s--muted-filled" id="step-2" data-active="false">
+			<div class="container flex-sm mb-2">
+				<div class="title">
+					<h2 class="h2">Order Service</h2>
+				</div>
+				<div class="steps">
+					<button type="button" class="btn step" data-step="step-1">1</button>
+					<button type="button" class="btn step active">2</button>
+				</div>
+			</div>
+			<div class="container">
 		</section>
 
 
@@ -617,5 +640,52 @@
 		</div>
 	</footer>
 	<script src="js/main.js"></script>
+	<script>
+		const form = document.getElementById("opt-form");
+		const resultField = document.getElementById("total");
+		const hiddenInput = document.getElementById("hidden-sum");
+		const hiddenInput2 = document.getElementById("hidden-selected");
+		const btnNextStep = document.querySelectorAll("[data-step]");
+		const sections = document.querySelectorAll("[data-active]");
+
+		if (form) {
+			let total = 0;
+			let list = [];
+			let checkboxes = form.querySelectorAll("input[type=checkbox]");
+			let disabledBtns = [...btnNextStep].filter(elem => elem.disabled);
+
+			form.addEventListener('change', function (e) {
+				total = 0;
+				list.length = 0;
+				let checkboxesSelected = [...checkboxes].filter(elem => elem.checked);
+				total = +checkboxesSelected.reduce((acc,item) => acc + Number(item.getAttribute("data-sum")), 0);
+				[...checkboxesSelected].forEach(item => list.push(item.value));
+
+				resultField.innerText = total;
+				hiddenInput.value = total;
+				hiddenInput2.value = `${list.join("; ")}`;
+
+				if (list.length) {
+					[...disabledBtns].forEach(item => { item.removeAttribute("disabled") });
+				} else {
+					[...disabledBtns].forEach(item => { item.setAttribute("disabled","") });
+				}
+			});
+		};
+
+		if (btnNextStep) {
+			[...btnNextStep].forEach(item => {
+				item.addEventListener('click', event => {
+					let nextStepSection = document.getElementById(item.getAttribute("data-step"));
+					if (!item.disabled) {
+						[...sections].forEach(item => {
+							item.setAttribute("data-active","false");
+						});
+						nextStepSection.setAttribute("data-active", "true")
+					}
+				})
+			})
+		};
+	</script>
 </body>
 </html>
