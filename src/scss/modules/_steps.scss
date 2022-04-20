@@ -1,0 +1,51 @@
+.step {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: $blue;
+	background-color: $white;
+	font-family: $add-font;
+	font-weight: 900;
+	flex-shrink: 0;
+	width: 3em;
+	height: 3em;
+	border-radius: 50%;
+	font-size: 1.1em;
+	border: none;
+	transition: .4s ease;
+	user-select: none;
+	cursor: pointer;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+	@media (max-width: 1100px) {
+		width: 2.8em;
+		height: 2.8em;
+	}
+	@media (max-width: 991px) {
+		width: 2.2em;
+		height: 2.2em;
+	}
+	&.active {
+		background-color: $yellow;
+	}
+}
+.opt {
+	&__list {
+		@media (min-width: 768px){
+			columns: 2;
+			column-gap: 2em;
+		}
+	}
+	&__row {
+		break-inside: avoid;
+		display: flex;
+		align-items: center;
+		min-width: 50%;
+		gap: 1em;
+		padding-top: .2em;
+		padding-bottom: .2em;
+		.checkbox__descr {
+			font-size: em(18);
+		}
+	}
+}

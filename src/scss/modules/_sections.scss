@@ -531,6 +531,12 @@
 		}
 	}
 }
+.flex-sm {
+	@media (min-width: 720px) {
+		display: flex;
+		gap: 2.8em;
+	}
+}
 .flex-md {
 	@media (min-width: 1200px) {
 		display: flex;
