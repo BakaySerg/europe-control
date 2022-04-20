@@ -363,5 +363,10 @@
 			background-image: url(../img/verify-documents/texture.png);
 			top: 1%;
 		}
+		&--3::before {
+			background-image: url(../img/order-service/texture-3.png);
+			top: 50%;
+			transform: translateY(-50%);
+		}
 	}
 }
