@@ -209,6 +209,27 @@
 			height: 34vmin;
 			max-height: 330px;
 		}
+		&--44:before, &--44:after {
+			content: '';
+			position: absolute;
+			background-image: url(../img/services/quality-assurance/chess.png);
+			background-repeat: no-repeat;
+			background-size: contain;
+			width: 34vmin;
+			max-width: 332px;
+			height: 34vmin;
+			max-height: 330px;
+		}
+		&--44:before{
+			top: 0%;
+			left: 87%;
+			transform: rotate(90deg);
+		}
+		&--44:after{
+			bottom: 0%;
+			right: 85.2%;
+			transform: rotate(180deg);
+		}
 		&--5:before {
 			content: '';
 			position: absolute;

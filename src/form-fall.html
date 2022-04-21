@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>EuropeControl | No successful!</title>
+	@@include('./include/head.html')
+</head>
+
+<body>
+	<div class="wrapper">
+		@@include('./include/icon-sprite.html')
+		<div class="intro intro--sm" style="--bg1x: url(../img/order-service/intro.jpg); --bg2x:url(../img/order-service/intro-2x.jpg);">
+			@@include('./include/header.html')
+			<!-- s-intro -->
+			<section class="s-intro">
+				<div class="container intro__row">
+					<div class="intro__text intro__text--lg">
+						<h1 class="h1">Order Service</h1>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- s-simply -->
+		<section class="s--simply s--muted-glass">
+			<div class="container container--sm decor-chess decor-chess--44">
+				<div class="thank">
+					<i class="fea__icon fea__icon--blue">
+						<svg class="icon icon--md" viewBox="0 0 32 32"><use xlink:href="#i-warning"/></svg>
+					</i>
+					<h2 class="strong"><span class="color-blue">No successful!</span><br>Please try again</h2>
+					<a class="link link--arrow" href="javascript:history.back()">
+						<span>Back</span>
+						<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg>
+					</a>
+				</div>
+			</div>
+		</section>
+
+	</div><!-- /wrapper -->
+	@@include('./include/footer.html')
+	<script src="js/main.js"></script>
+</body>
+</html>

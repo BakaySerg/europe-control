@@ -163,8 +163,6 @@
 						<label class="checkbox__descr" for="opt-16">Testing & Audit</label>
 						<div class="opt__sum">€ 100</div>
 					</div>
-					<input type="hidden" name="res" id="hidden-sum" value="0">
-					<input type="hidden" name="res2" id="hidden-selected" value="0">
 				</form>
 				<div class="opt__cta">
 					<div class="h3 h3--light">Total Payment:</div>
@@ -224,9 +222,14 @@
 							<input type="text" name="card-num" class="form__input" placeholder="Cart Number *" minlength="6" data-mask="0000 0000 0000 0000" inputmode="numeric" required>
 						</div>
 						<div class="form__dual">
-							<input type="text" name="card-date" class="form__input" placeholder="Expiration Date *" minlength="2" data-mask="00 / 00" pattern="[0-9]*" inputmode="decimal" required>
+							<input type="text" name="card-date" class="form__input" placeholder="Expiration Date *" minlength="2" data-mask="00 / 00" inputmode="decimal" required>
 							<input type="text" name="card-cvv" class="form__input" placeholder="CVV2/CVC2 *" data-mask="000" pattern="[0-9]*" inputmode="decimal" required>
 						</div>
+
+						<!-- selection results -->
+						<input type="hidden" name="res" id="hidden-sum" value="0">
+						<input type="hidden" name="res2" id="hidden-selected" value="0">
+
 						<div class="form__cta pt-15">
 							<div class="captcha"><img src="img/contacts/captcha.jpg" alt="captcha"></div>
 							<div>
@@ -317,49 +320,31 @@
 
 	<script>
 		if (document.forms[0] && window.FormData) {
-				const message = new Object();
-				message.loading = "Loading...";
-				message.success = "Thank you!.. We'll get back to you.";
-				message.failure = "An error has occurred. There is no communication with the server, try again later...";
-
 				const form = document.querySelector(".form");
-				// const statusMessage = document.getElementById("form-popup");
-				// statusMessage.className = 'status';
 
 				let request = new XMLHttpRequest();
-				request.open('POST', 'send.php', true);
+				request.open('POST', 'send-order-service.php', true);
 				// request.setRequestHeader('accept', 'application/json');
 
 				form.addEventListener('submit', function (event) {
 					event.preventDefault();
-					// form.appendChild(statusMessage);
 
 					let formData = new FormData(form);
-
 					// Sending data
 					request.send(formData);
-
 					request.onreadystatechange = function () {
 						// <4 =  waiting response
-						if (request.readyState < 4) {
-							// statusMessage.innerHTML = message.loading;
-							// statusMessage.classList.add("form__popup--show");
-						}
+						// if (request.readyState < 4) {}
 						// 4 = response ready
-						else if (request.readyState === 4) {
+						if (request.readyState === 4) {
 							// 200 - 299 = success sending
 							if (request.status == 200 && request.status < 300){
-								// statusMessage.innerHTML = message.success;
-								// statusMessage.classList.add("form__popup--show","form__popup--success");
-								window.navigator.vibrate(30);
-								// setTimeout(() => statusMessage.classList.remove("form__popup--show", "form__popup--success"), 5000);
 								form.reset();
+								// setTimeout(() => statusMessage.classList.remove("form__popup--show", "form__popup--success"), 5000);
+								document.location.href = 'form-thank.html'
 							}
 							else {
-								// statusMessage.classList.add("form__popup--show","form__popup--fail");
-								// statusMessage.innerHTML = message.failure;
-								window.navigator.vibrate(30);
-								// setTimeout(() => statusMessage.classList.remove("form__popup--show", "form__popup--fail"), 5000);
+								document.location.href = 'form-fall.html'
 							}
 						}
 					}

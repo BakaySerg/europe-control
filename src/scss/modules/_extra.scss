@@ -363,3 +363,25 @@
 		margin: 0 auto 0.8em;
 	}
 }
+.thank {
+	@media (min-width: 768px){
+		padding-top: 2em;
+		padding-bottom: 3em;
+	}
+	max-width: 600px;
+	margin: auto;
+	text-align: center;
+	.fea__icon {
+		margin: 0 auto;
+	}
+	.strong {
+		line-height: 1.5;
+		margin-top: 1.5em;
+		margin-bottom: 2em;
+	}
+	.link--arrow {
+		width: fit-content;
+		justify-content: center;
+		margin: 0 auto;
+	}
+}
