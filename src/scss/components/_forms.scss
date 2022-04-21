@@ -260,3 +260,12 @@
 	opacity: 1;
 	transform: scale(1);
 }
+.form__secure {
+	display: flex;
+	align-items: center;
+	gap: 0.5em;
+	margin-bottom: .9em;
+	.icon {
+		color: $blue;
+	}
+}

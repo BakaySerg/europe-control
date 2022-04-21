@@ -190,6 +190,26 @@
 			</div>
 			<div class="container">
 				<div class="lim-center pt-05">
+					<div class="pay">
+						<div class="pay__item">
+							<div class="pay__logo">
+								<img loading="lazy" src="img/order-service/visa-mastercard.png" alt="visa-mastercard" width="31" height="36">
+							</div>
+							<div class="h3">Credit Card</div>
+						</div>
+						<div class="pay__item">
+							<div class="pay__logo">
+								<img loading="lazy" src="img/order-service/pngwing.png" alt="pngwing" width="38" height="39">
+							</div>
+							<div class="h3">Bank Transfer</div>
+						</div>
+						<div class="pay__item">
+							<div class="pay__logo">
+								<img loading="lazy" src="img/order-service/sepa.png" alt="sepa" width="32" height="32">
+							</div>
+							<div class="h3">Sepa</div>
+						</div>
+					</div>
 					<form action="#" class="form decor-texture decor-texture--3">
 						<h3 class="h3 h3--light mb-1">Payment details:</h3>
 						<div class="form__dual">
@@ -197,22 +217,28 @@
 							<input type="text" name="l-name" class="form__input" placeholder="Last Name *" minlength="2" required>
 						</div>
 						<div class="form__dual">
-							<input type="text" name="job" class="form__input" placeholder="Job Title" minlength="2">
-							<input type="text" name="company" class="form__input" placeholder="Company Name*" minlength="2" required>
-						</div>
-						<div class="form__dual">
-
-						</div>
-						<div class="form__dual">
 							<input type="email" name="email" class="form__input" placeholder="Email *" minlength="2" required>
 							<input type="tel" name="phone" class="form__input" placeholder="Phone" pattern="[0-9]{5,14}" inputmode="numeric">
 						</div>
-						<div class="form__cta pt-1">
+						<div class="form__single">
+							<input type="text" name="card-num" class="form__input" placeholder="Cart Number *" minlength="6" data-mask="0000 0000 0000 0000" inputmode="numeric" required>
+						</div>
+						<div class="form__dual">
+							<input type="text" name="card-date" class="form__input" placeholder="Expiration Date *" minlength="2" data-mask="00 / 00" pattern="[0-9]*" inputmode="decimal" required>
+							<input type="text" name="card-cvv" class="form__input" placeholder="CVV2/CVC2 *" data-mask="000" pattern="[0-9]*" inputmode="decimal" required>
+						</div>
+						<div class="form__cta pt-15">
 							<div class="captcha"><img src="img/contacts/captcha.jpg" alt="captcha"></div>
-							<button type="submit" class="btn btn--icon btn--yellow-filled btn--rounded">
-								Submit
-								<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg>
-							</button>
+							<div>
+								<div class="form__secure">
+									<svg class="icon" viewBox="0 0 32 32"><use xlink:href="#i-lock"/></svg>
+									<span>Connection secure</span>
+								</div>
+								<button type="submit" class="btn btn--icon btn--yellow-filled btn--rounded">
+									Submit
+									<svg class="arrow" viewBox="0 0 32 32"><use xlink:href="#i-arrow"/></svg>
+								</button>
+							</div>
 						</div>
 					</form>
 				</div>
@@ -264,11 +290,81 @@
 						[...sections].forEach(item => {
 							item.setAttribute("data-active","false");
 						});
-						nextStepSection.setAttribute("data-active", "true")
+						nextStepSection.setAttribute("data-active", "true");
+						window.scrollTo({
+							top: 280,
+							behavior: "smooth"
+						});
 					}
 				})
 			})
 		};
+	</script>
+
+	<script src="https://unpkg.com/imask"></script>
+	<script>
+		let elements = document.querySelectorAll("[data-mask]");
+		[...elements].forEach(element => {
+			let pattern = element.getAttribute('data-mask');
+			let maskOptions = {
+				mask: pattern,
+				min: element.getAttribute('minlength')
+			};
+			let mask = IMask(element, maskOptions);
+			mask.on("complete", function () { console.log(mask.value) });
+		});
+	</script>
+
+	<script>
+		if (document.forms[0] && window.FormData) {
+				const message = new Object();
+				message.loading = "Loading...";
+				message.success = "Thank you!.. We'll get back to you.";
+				message.failure = "An error has occurred. There is no communication with the server, try again later...";
+
+				const form = document.querySelector(".form");
+				// const statusMessage = document.getElementById("form-popup");
+				// statusMessage.className = 'status';
+
+				let request = new XMLHttpRequest();
+				request.open('POST', 'send.php', true);
+				// request.setRequestHeader('accept', 'application/json');
+
+				form.addEventListener('submit', function (event) {
+					event.preventDefault();
+					// form.appendChild(statusMessage);
+
+					let formData = new FormData(form);
+
+					// Sending data
+					request.send(formData);
+
+					request.onreadystatechange = function () {
+						// <4 =  waiting response
+						if (request.readyState < 4) {
+							// statusMessage.innerHTML = message.loading;
+							// statusMessage.classList.add("form__popup--show");
+						}
+						// 4 = response ready
+						else if (request.readyState === 4) {
+							// 200 - 299 = success sending
+							if (request.status == 200 && request.status < 300){
+								// statusMessage.innerHTML = message.success;
+								// statusMessage.classList.add("form__popup--show","form__popup--success");
+								window.navigator.vibrate(30);
+								// setTimeout(() => statusMessage.classList.remove("form__popup--show", "form__popup--success"), 5000);
+								form.reset();
+							}
+							else {
+								// statusMessage.classList.add("form__popup--show","form__popup--fail");
+								// statusMessage.innerHTML = message.failure;
+								window.navigator.vibrate(30);
+								// setTimeout(() => statusMessage.classList.remove("form__popup--show", "form__popup--fail"), 5000);
+							}
+						}
+					}
+				});
+			};
 	</script>
 </body>
 </html>
