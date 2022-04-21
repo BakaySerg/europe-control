@@ -84,10 +84,10 @@
 						</div>
 						<div class="form__dual">
 							<select class="form__select" name="location">
-								<option value="0">Location</option>
-								<option value="1">Europe</option>
-								<option value="2">USA</option>
-								<option value="2">Asia</option>
+								<option value="not specified...">Location</option>
+								<option value="Europe">Europe</option>
+								<option value="USA">USA</option>
+								<option value="Asia">Asia</option>
 							</select>
 							<select class="form__select" name="in-type">
 								<option value="0">Inquiry Type</option>
@@ -118,5 +118,37 @@
 	<script src="js/main.js"></script>
 	<script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyATCHV8sdVBXNg0sw2XhPOEX2jMUGx05ag"></script>
 	<script defer src="js/map.js"></script>
+	<script>
+		if (document.forms[0] && window.FormData) {
+			const form = document.querySelector(".form");
+
+			let request = new XMLHttpRequest();
+			request.open('POST', 'send-contacts.php', true);
+			// request.setRequestHeader('accept', 'application/json');
+
+			form.addEventListener('submit', function (event) {
+				event.preventDefault();
+
+				let formData = new FormData(form);
+				// Sending data
+				request.send(formData);
+				request.onreadystatechange = function () {
+					// <4 =  waiting response
+					// if (request.readyState < 4) {}
+
+					// 4 = response ready
+					if (request.readyState === 4) {
+						// 200 - 299 = success sending
+						if (request.status == 200 && request.status < 300) {
+							document.location.href = 'form-thank.html'
+						}
+						else {
+							document.location.href = 'form-fall.html'
+						}
+					}
+				}
+			});
+		};
+	</script>
 </body>
 </html>

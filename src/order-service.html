@@ -335,12 +335,11 @@
 					request.onreadystatechange = function () {
 						// <4 =  waiting response
 						// if (request.readyState < 4) {}
+
 						// 4 = response ready
 						if (request.readyState === 4) {
 							// 200 - 299 = success sending
 							if (request.status == 200 && request.status < 300){
-								form.reset();
-								// setTimeout(() => statusMessage.classList.remove("form__popup--show", "form__popup--success"), 5000);
 								document.location.href = 'form-thank.html'
 							}
 							else {

