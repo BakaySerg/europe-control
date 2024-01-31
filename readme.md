@@ -5,12 +5,10 @@
 👉 Live Demo: 
 
 <h2>Project setup</h2>
-<hr>
+
 npm i
-<hr>
+
 
 <h2>Run project</h2>>
-<hr>
-gulp
-```
 
+gulp
