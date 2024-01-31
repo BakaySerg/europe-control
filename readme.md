@@ -6,9 +6,8 @@
 
 <h2>Project setup</h2>
 
-npm i
-
+<i>npm i</i>
 
 <h2>Run project</h2>>
 
-gulp
+<i>gulp</i>
