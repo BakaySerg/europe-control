@@ -6,8 +6,8 @@
 
 <h2>Project setup</h2>
 
-<i>⌨️   npm i</i>
+<i>⌨️ ▶️ &emsp; npm i</i>
 
 <h2>Run project</h2>
 
-<i>⌨️   gulp</i>
+<i>⌨️ ▶️ &emsp; gulp</i>
