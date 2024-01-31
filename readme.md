@@ -4,10 +4,10 @@
 
 👉 Live Demo: 
 
-<h2>Project setup</h2>
+<h2>Project setup ⚙️</h2>
 
 <i>⌨️ &emsp; npm i</i>
 
-<h2>Run project</h2>
+<h2>Run project 🏁</h2>
 
 <i>⌨️ &emsp; gulp</i>
